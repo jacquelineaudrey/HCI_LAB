@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #001F4A;
+}
+
+/* ======================================== NAVBAR ========================================= */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.6vw 6vw; 
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#hero{
+    margin-right: 7px; 
+    font-size: 2vw;
+    font-weight: 1000;
+    text-decoration: none;
+    color: #001F4A;
+}
+
+#hero:hover {
+    color: #0049A8;
+    transition: color 0.2s ease-in-out;
+}
+
+.logo-img img {
+    height: 2.2vw; 
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    top: 32%;
+    right: 4%;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    font-size: 1.3vw;
+}
+
+.navbar a {
+    position: relative; 
+    color: #001F4A;
+    margin: 0 1.6vw; 
+    text-decoration: none;
+    opacity: 1; 
+}
+
+.navbar a:hover {
+    color: #0049A8;
+}
+
+.navbar a::before {
+    content: ''; 
+    position: absolute;
+    bottom: -0.3vw; 
+    left: 0; 
+    width: 0; 
+    height: 0.2vw; 
+    background: linear-gradient(90deg,  #66B4FF 0%, #0055C9 100%);
+    transition: width 0.7s ease;
+}
+
+.navbar a:hover::before {
+    width: 100%; 
+}
+
+.button1 {
+    padding: 0.8vw 2vw;
+    border-radius: 30vw;
+    background: var(--gradient1, linear-gradient(90deg, #66B4FF 0%, #0055C9 100%));
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1200px) {
+    .header{
+        padding: 1.6vw 5%;
+    }
+    #hero{
+        font-size: 1.8vw;
+    }
+    .logo-img img{
+        height: 2.1vw;
+    }
+    .button1{
+        padding: 0.7vw 1.8vw;
+        font-size: 0.7rem;
+    }
+    .navbar a{
+        font-size: 1.2vw;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header {
+        padding: 0.9rem 2rem; 
+    }
+
+    .navbar {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 10px 0; 
+    }
+    .icons {
+        right: 7%;
+        display: block;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+        position: absolute;
+        width: 1.15rem;
+        height: 1.15rem;
+        right: 5%;
+        top: 13%;
+    }
+
+    #hero{
+        font-size: 1rem;
+        margin-right: 5px;
+    }
+    .logo-img img {
+        position: absolute;
+        top: 35%;
+        height: 1.2rem;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0rem;
+        /* backdrop-filter: blur(50px); */
+        background-color: #001F4A;
+        overflow: hidden;
+        transition: .3s ease;
+    }
+    #check:checked~.navbar {
+        height: 13rem;
+    }
+    .navbar a{
+        font-size: 0.8rem;
+        color: #ffffff;
+    }
+
+    .button-wrapper{
+        position: absolute;
+        right: 12%;
+    }
+    .button1{
+        padding: 0.4rem 1rem;
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .button-wrapper{
+        position: absolute;
+        right: 16%;
+    }
+    .button1{
+        padding: 0.35rem 0.9rem;
+        font-size: 0.5rem;
+    }
+}
+
+/* ================================ FOOTER ================================= */
+
+.footer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #001F4A;
+}
+
+.bagiDuaFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3vw 6vw 2.5vw 6vw;
+    gap: 3vw;
+}
+
+.footerTigaAtas {
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+}
+
+.footerTigaBox {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    gap: 1.5vw;
+}
+
+.footerTigaBox p {
+    font-size: 1.2vw;
+    color: #7790b2;
+    line-height: 1.9vw;
+    width: 22vw;
+}
+
+.footerIsiTiga {
+    margin-bottom: -0.5vw;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    gap: 0.8vw;
+}
+
+.title h4{
+    font-size: 1.7vw;
+    font-weight: 500;
+}
+
+.title img{
+    width: 2.2vw;
+    height: 2.2vw;
+}
+
+.contact-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;
+}
+
+#subscribe-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-bs {
+    border-top: 0.1vw solid #345A8B; 
+    padding-top: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#footer-btn {
+    padding: 0.7vw 1.3vw;
+    font-size: 1.3vw;
+    width: 10.5vw;
+    text-align: center;
+}
+
+#footer-button {
+    justify-content: flex-start;
+    gap: 1.7vw;
+}
+
+.footer-bs p {
+    font-size: 1.2vw;
+    color: #7790b2;
+}
+
+#footer_button {
+    width: 4vw;
+    height: 4vw;
+}
+
+#facebook {
+    width: 1.3vw;
+}

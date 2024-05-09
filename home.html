@@ -31,7 +31,7 @@
         </nav>
 
         <div class="button-wrapper">
-            <a href="#" class="button1">Get Started</a>
+            <a href="./register.html" class="button1">Get Started</a>
         </div>
     </header>
 
@@ -108,15 +108,14 @@
             <div class="section_title_container">
                 <div class="section_title">
                     <h1>Features</h1>
-                    <p>Our goal is to educate young students to ace their exam with A-grade 
-                        and prepare them for college entrance exam.</p>
+                    <p>Our goal is to educate young students to ace their exam with A-grade and prepare them for college entrance exam.</p>
                 </div>
                 <div class="section_button">
-                    <a href="#" class="features_button"><</a>
-                    <a href="#" class="features_button">></a>
+                    <button class="features_button" id="prev">&lt;</button>
+                    <button class="features_button" id="next">&gt;</button>
                 </div>
             </div>
-
+        
             <div id="slider">
                 <div class="inner">
                     <div class="slide slide_1">
@@ -151,7 +150,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>        
 
         <section class="container" id="best_selling">
             <div class="text_wrapper">
@@ -160,33 +159,52 @@
                 <h1> BEST-SELLING PACKAGE . </h1>
                 <h1> BEST-SELLING PACKAGE . </h1>
             </div>
-            <div class="best-selling_container">
-                <div id="blue-card">
-                    <div id="biru_best-selling">
-                        <div id="achiever">
-                            <h2>ACHIEVER</h2>
-                            <h3>$<span>53.99</span>/mo</h3>
+            <div class="coba2">
+                <img id="sparkle_pink" src="assets/sparkle_pink.png" alt="">
+                <div class="coba">
+                    <img id="circular" src="assets/circular_text.png" alt="">
+                    <div class="best-selling_container">
+                        <div id="blue-card">
+                            <div id="biru_best-selling">
+                                <div id="achiever">
+                                    <h2>ACHIEVER</h2>
+                                    <h3>$ <span>53.99</span> /mo</h3>
+                                </div>
+                                <div class="tiga-ceklis-content">
+                                    <div class="ceklis-content">
+                                        <img class="ceklis" src="assets/ceklis.png" alt="">
+                                        <h4>All Explorer Package Features</h4>
+                                    </div>
+                                    <div class="ceklis-content">
+                                        <img class="ceklis" src="assets/ceklis.png" alt="">
+                                        <h4>Premium Content Access</h4>
+                                    </div>
+                                    <div class="ceklis-content">
+                                        <img class="ceklis" src="assets/ceklis.png" alt="">
+                                        <h4>Priority Forum Support</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="button_bs">
+                                <a class="button1" id="button_best-selling" href="#">Subscribe</a>
+                            </div>
                         </div>
-                        <div class="vertical-line"></div>
-                        <div class="tiga-ceklis-content">
-                            <div class="ceklis-content">
-                                <img src="" alt="">
-                                <h4>All Explorer Package Features</h4>
+        
+                        <div class="bs-under">
+                            <div class="text_wrapper_bs">
+                                <p>90% students achieve A score!</p>
                             </div>
-                            <div class="ceklis-content">
-                                <img src="" alt="">
-                                <h4>Premium Content Access</h4>
-                            </div>
-                            <div class="ceklis-content">
-                                <img src="" alt="">
-                                <h4>Priority Forum Support</h4>
-                            </div>
+                            <a class="button2" href="#" id="viewAll-bs">
+                                <h3>View all</h3>
+                                <img src="assets/arrow_button2.png" alt="">
+                            </a>
                         </div>
-                    </div>
-                    <a class="button1" id="button_subscribe" href="#">Subscribe</a>
+                    </div>      
                 </div>
             </div>
         </section>
+        <!-- <p id="circularText">POPULAR.POPULAR.</p> -->
+
 
         <section class="container" id="faq">
             <div class="section_title_container">
@@ -251,8 +269,47 @@
             </div>
         </section>
     </main>
-    <footer>
+    
+    <footer class="footer">
+        <div class="bagiDuaFooter">
+            <div class="footerIsiTiga">
+                <div class="footerTigaAtas">
+                    <div class="footerTigaBox">
+                        <div class="title">
+                            <h4>Jensdemy</h4>
+                            <img src="assets/logo.png" alt="">
+                        </div>
+                        <p>Jensdemy is an online learning platform that empowers success from elementary to college.</p>
+                    </div>
+                    <div class="footerTigaBox">
+                        <div class="title">
+                            <h4>Contact</h4>
+                        </div>
+                        <div class="contact-footer">
+                            <p>johndoe@jensdemy.com</p>
+                            <p>Cemara Hijau, D1234, West Jakarta, Indonesia</p>
+                            <p>+62 822 7618 2818</p>
+                        </div>
+                    </div>
+                    <div class="footerTigaBox" id="subscribe-footer">
+                        <div class="title">
+                            <h4>Subscribe</h4>
+                        </div>
+                        <p>Subscribe to Jensdemy to access our exclusive features and courses.</p>
+                        <a href="./register.html" class="button1" id="footer-btn">Subscribe</a>
+                    </div>
+                </div>
+            </div>
 
+            <div class="footer-bs">
+                <div class="section_button" id="footer-button">
+                    <a href="#" target="_blank" class="faq_button" id="footer_button"><img id="facebook" src="assets/facebook.png" alt=""></a>
+                    <a href="#" target="_blank" class="faq_button" id="footer_button"><img src="assets/twitter.png" alt=""></a>
+                    <a href="#" target="_blank" class="faq_button" id="footer_button"><img src="assets/instagram.png" alt=""></a>
+                </div>
+                <p>© 2024 Jacqueline Audrey Iman. All rights reserved</p>
+            </div>
+        </div>
     </footer>
     
     <script src="home.js"></script>

@@ -718,7 +718,7 @@ p {
 .slide-content:hover {
     background: #66B4FF;
     transform: scale(1.02);
-    padding: 2vw 2.7vw;
+    padding: 2vw 2.6vw;
     cursor: pointer;
     height: 25vw;
     justify-content: center;

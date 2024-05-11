@@ -36,17 +36,28 @@ const answers = document.querySelectorAll(".answer");
 buttons.forEach(button => {
     button.addEventListener("click", function() {
         const currentAnswer = this.parentElement.nextElementSibling;
+        const isActive = currentAnswer.classList.contains('active');
+
         answers.forEach(answer => {
             if (answer !== currentAnswer) {
-                answer.style.display = "none";
+                answer.classList.remove('active');
+                answer.style.maxHeight = "0";
                 answer.previousElementSibling.querySelector(".toggle-button").textContent = "+";
             }
         });
-        
-        currentAnswer.style.display = currentAnswer.style.display === "block" ? "none" : "block";
-        this.textContent = currentAnswer.style.display === "block" ? "-" : "+";
+
+        if (!isActive) {
+            currentAnswer.classList.add('active');
+            currentAnswer.style.maxHeight = currentAnswer.scrollHeight + "px";
+            this.textContent = "-";
+        } else {
+            currentAnswer.classList.remove('active');
+            currentAnswer.style.maxHeight = null;
+            this.textContent = "+";
+        }
     });
 });
+
 
 
 

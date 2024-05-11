@@ -33,32 +33,32 @@ updateSlider();
 const buttons = document.querySelectorAll(".toggle-button");
 const answers = document.querySelectorAll(".answer");
 
-buttons.forEach(button => {
-    button.addEventListener("click", function() {
-        const currentAnswer = this.parentElement.nextElementSibling;
-        const isActive = currentAnswer.classList.contains('active');
+button.addEventListener("click", function() {
+    const currentAnswer = this.parentElement.nextElementSibling;
+    const isActive = currentAnswer.classList.contains('active');
 
-        answers.forEach(answer => {
-            if (answer !== currentAnswer) {
-                answer.classList.remove('active');
-                answer.style.maxHeight = "0";
-                answer.previousElementSibling.querySelector(".toggle-button").textContent = "+";
-            }
-        });
-
-        if (!isActive) {
-            currentAnswer.classList.add('active');
-            currentAnswer.style.maxHeight = currentAnswer.scrollHeight + "px";
-            this.textContent = "-";
-        } else {
-            currentAnswer.classList.remove('active');
-            currentAnswer.style.maxHeight = null;
-            this.textContent = "+";
+    answers.forEach(answer => {
+        if (answer !== currentAnswer) {
+            answer.classList.remove('active');
+            answer.classList.add('inactive');
+            answer.style.maxHeight = "0";
+            // answer.style.slides;
+            answer.previousElementSibling.querySelector(".toggle-button").textContent = "+";
         }
     });
+
+    if (!isActive) {
+        currentAnswer.classList.add('active');
+        currentAnswer.classList.remove('inactive');
+        currentAnswer.style.maxHeight = currentAnswer.scrollHeight + "px";
+        this.textContent = "-";
+    } else {
+        currentAnswer.classList.remove('active');
+        currentAnswer.classList.add('inactive');
+        currentAnswer.style.maxHeight = null;
+        this.textContent = "+";
+    }
 });
-
-
 
 
 

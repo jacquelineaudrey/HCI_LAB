@@ -1189,14 +1189,20 @@ p {
     color: #345A8B;
     font-size: 1.2vw;
     transition: max-height 0.5s ease-in-out;
-    max-height: 0;
-    overflow: hidden;
     margin-top: 0.3vw;
     margin-bottom: 0.5vw;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+
 }
 
 .answer.active {
-    display: block;
+    opacity: 100%;
+}
+
+.answer.inactive {
+    max-height: 0;
 }
 
 .toggle-button {

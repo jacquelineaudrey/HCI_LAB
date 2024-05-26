@@ -14,7 +14,7 @@ html {
 
 body {
     min-height: 100%;
-    background: #66B4FF;
+    background: #ffffff;
     color: #001F4A;
 }
 
@@ -146,7 +146,7 @@ body {
 
 @media screen and (max-width: 768px){
     .header {
-        padding: 1.1rem 7vw; 
+        padding: 1.1rem 2rem; 
     }
     .icons {
         top: 25%;
@@ -223,7 +223,7 @@ body {
 
 @media screen and (max-width: 500px){
     .header {
-        padding: 0.7rem 7vw; 
+        padding: 0.7rem 2rem; 
     }
     .button-wrapper{
         position: absolute;
@@ -249,186 +249,222 @@ body {
     }
 }
 
-/* ========================================== */
+/* ========================================== ISI SUBSCRIPTION PAGE ========================================*/
 
 .isi {
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.isi::before,
-.isi::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(175, 203, 255, 0.2) 0%, rgba(0, 70, 168, 0.2) 100%);
-    z-index: -1;
-    animation: moveCircle 10s linear infinite;
-}
-
-.isi::before {
-    width: 400px;
-    height: 400px;
-    top: 0%;
-    left: -8%;
-}
-
-.isi::after {
-    width: 200px;
-    height: 200px;
-    bottom: 5%;
-    right: 2%;
-}
-
-@keyframes moveCircle {
-    0% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: translate(60px, 20px);
-    }
-    50% {
-        transform: translate(0, -40px);
-    }
-    75% {
-        transform: translate(-60px, 20px);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
+    align-items: center;
+    background: #DEEFFF;
+    padding-top: 12vw;
+    padding-bottom: 5vw;
 }
 
 .container {
-    position: relative;
-    border-radius: 6px;
-    padding: 40px;
-    margin: 13vw 6.5vw 8vw 6.5vw;
-    background-color: #DEEFFF;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 0 6.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
 }
 
-.container header {
+.table {
+    background: #ffffff;
+    width: calc(25% - 22px);
+    padding: 60px 40px 40px 40px;
+    border-radius: 40px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 73, 168, 0.15);
     position: relative;
-    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+    .table{
+        width: calc(100% / 3 - 22px);
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .table{
+        width: calc(100% / 2 - 22px);
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .table{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+/* Price section styling */
+.price-section {
+    display: flex;
+    justify-content: center;
+}
+
+.price-area {
+    height: 140px;
+    width: 170px;
+    background: #B0D8FF;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.inner-area {
+    height: 100%;
+    width: 100%;
+    background: #0055C9;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    line-height: 130px;
+}
+
+.text {
+    font-size: 15px;
+}
+
+.price {
+    font-size: 27px;
     font-weight: 600;
 }
 
-.container header::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -9px;
-    height: 3px;
-    width: 50px;
-    border-radius: 8px;
-    background-color: #0055C9;
-}
-
-#form {
-    position: relative;
-    margin-top: 35px;
-    background-color: #DEEFFF;
-    border-radius: 10px;
-}
-
-.fields {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.input-field {
-    display: flex;
-    flex-direction: column;
-    width: calc(33.333% - 20px);
-    margin: 4px 0;
-}
-
-.input-field label {
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.input-field input {
-    outline: none;
-    font-size: 14px;
-    font-weight: 400;
-    border-radius: 5px;
-    border: 1px solid #0055C9;
-    padding: 0 15px;
-    height: 42px;
-    margin: 8px 0;
-    background-color: #ffffff;
-    color: #001F4A;
-}
-
-.input-field div {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.checkbox-field {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.checkbox-field label {
-    margin-left: 10px;
-}
-
-.bottom-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 20px;
-}
-
-.button-group {
-    display: flex;
-    justify-content: flex-start;
-    gap: 30px;
+/* Package name styling */
+.package-name {
     width: 100%;
-    margin-top: 10px;
+    height: 2px;
+    background: #B0D8FF;
+    margin: 60px 0;
+    position: relative;
 }
 
-.button-group button {
-    width: 150px;
-    height: 40px;
-    border-radius: 5px;
+.package-name::before {
+    position: absolute;
+    content: attr(data-package-name);
+    left: 50%;
+    top: 50%;
+    background: #ffffff;
+    font-size: 23px;
+    font-weight: 600;
+    padding: 0 10px;
+    transform: translate(-50%, -50%);
+}
+
+/* Features list styling */
+.features {
+    flex-grow: 1;
+}
+
+.features li {
+    margin-bottom: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-name {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    width: 80%;
+}
+
+.icon.check img {
+    height: 15px;
+}
+
+.icon.cross img {
+    height: 15px;
+}
+
+.button-card {
+    width: 100%;
+    padding: 0.8vw 0;
+    border-radius: 30vw;
+    background: var(--gradient1, linear-gradient(90deg, #66B4FF 0%, #0055C9 100%));
+    color: #ffffff;
     border: none;
-    background-color: #0055C9;
-    color: white;
-    font-size: 16px;
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-weight: 400;
+    text-align: center;
+    transition: transform 0.4s ease-in-out;
+}
+
+.button-card:hover {
+    transform: scale(0.9); 
+}
+
+.btn button {
+    width: 100%;
+    padding: 0.8vw 0;
+    border-radius: 30vw;
+    background: var(--gradient1, linear-gradient(90deg, #66B4FF 0%, #0055C9 100%));
+    color: #ffffff;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 400;
+    transition: transform 0.4s ease-in-out;
     cursor: pointer;
+    text-align: center;
 }
 
-.button-group button:hover {
-    background-color: #0041a3;
+.btn button:hover {
+    transform: scale(0.9); 
 }
 
-#error{
-    margin-top: 20px;
-    color: red;
+.free .package-name::before{
+    content: "Free";
 }
 
-@media (max-width: 1200px) {
-    .input-field {
-        width: calc(50% - 20px);
-    }
+.explorer .package-name::before{
+    content: "Explorer";
 }
 
-@media (max-width: 768px) {
-    .input-field {
-        width: 100%;
-    }
+.achiever .package-name::before{
+    content: "Achiever";
 }
 
+.master .package-name::before{
+    content: "Master";
+}
+
+.ribbon{
+    height: 260px;
+    width: 260px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    overflow: hidden;
+}
+
+.ribbon span{
+    position: absolute;
+    background: #E94782;
+    width: 300px;
+    padding: 9px 0;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    top: 29px;
+    right: 77px;
+    transform: rotate(-45deg);
+}
 
 /* ================================ FOOTER ================================= */
 

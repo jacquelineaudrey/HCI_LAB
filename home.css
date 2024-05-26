@@ -254,7 +254,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 8vw 5vw; 
+    padding: 8vw 5vw 9vw 5vw; 
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -609,13 +609,13 @@ body {
 #features {
     background: #DEEFFF;
     color: #001F4A;
-    padding: 5vw 0vw 5vw 0vw;
+    padding: 6vw 0vw 8vw 0vw;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 3.5vw;
+    gap: 5vw;
 }
 
 .section_title_container{
@@ -640,8 +640,8 @@ body {
 }
 
 p {
-    font-size: 1.35vw;
-    line-height: 2.2vw;
+    font-size: 1.4vw;
+    line-height: 2.5vw;
     font-weight: 300;
     color: #345A8B;;
 }
@@ -701,7 +701,7 @@ p {
     border-radius: 2vw;
     display: flex;
     flex-direction: column;
-    padding: 0 2vw;
+    padding: 0 3vw;
     align-items: center;
     text-align: center;
     gap: 2vw;
@@ -721,7 +721,7 @@ p {
 }
 
 .slide-content img{
-    height: 13vw;
+    height: 11vw;
     object-fit: cover;
 }
 
@@ -741,7 +741,7 @@ p {
 }
 
 .slide-content h2 {
-    font-size: 1.7vw;
+    font-size: 1.5vw;
     line-height: 2vw;
     font-weight: 600;
 }
@@ -850,12 +850,12 @@ p {
 #best_selling{
     width: 100%;
     margin: 0;
-    padding: 6vw 0 8vw 0;
+    padding: 7vw 0 9vw 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    gap: 6vw;
+    gap: 7vw;
 }
 
 .text_wrapper {
@@ -1217,13 +1217,13 @@ p {
 #faq {
     background: #DEEFFF;
     color: #001F4A;
-    padding: 5.5vw 0vw ;
+    padding: 7vw 0vw ;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 4vw;
+    gap: 5.5vw;
 }
 
 .faq-container {
@@ -1235,7 +1235,7 @@ p {
 .faq-item {
     background: #ffffff;
     box-shadow: 0px 0.3vw 0.3vw 0px rgba(0, 31, 74, 0.15);
-    margin-bottom: 2vw;
+    margin-bottom: 2.5vw;
     padding: 1.8vw 3.2vw 0.6vw 3.2vw;
     border-radius: 2vw;
 }
@@ -1347,7 +1347,7 @@ p {
     margin: 0;
     width: 100%;
     box-sizing: border-box;
-    padding: 7.5vw 6vw 6.5vw 6vw;
+    padding: 8vw 6vw;
 }
 
 .testimonials-container {

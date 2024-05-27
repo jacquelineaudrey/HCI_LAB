@@ -304,35 +304,35 @@ body {
 
 .container {
     position: relative;
-    border-radius: 6px;
-    padding: 40px;
-    margin: 13vw 6.5vw 8vw 6.5vw;
+    border-radius: 3vw;
+    padding: 50px;
+    margin: 12.5vw 6vw 6.5vw 6vw;
     background-color: #ffffff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .container header {
     position: relative;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 .container header::before {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -7px;
+    bottom: -9px;
     height: 3px;
-    width: 35px;
+    width: 105px;
     border-radius: 8px;
     background-color: #0055C9;
 }
 
 #form {
     position: relative;
-    margin-top: 35px;
+    margin-top: 50px;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 3vw;
 }
 
 .fields {
@@ -345,7 +345,7 @@ body {
     display: flex;
     flex-direction: column;
     width: calc(33.333% - 20px);
-    margin: 4px 0;
+    margin-top: -10px;
 }
 
 .input-field label {
@@ -357,9 +357,9 @@ body {
     outline: none;
     font-size: 14px;
     font-weight: 400;
-    border-radius: 5px;
+    border-radius: 2vw;
     border: 1px solid #0055C9;
-    padding: 0 15px;
+    padding: 0 20px;
     height: 42px;
     margin: 8px 0;
     background-color: #ffffff;
@@ -404,16 +404,46 @@ input::placeholder {
 .button-group button {
     width: 150px;
     height: 40px;
-    border-radius: 5px;
     border: none;
-    background-color: #0055C9;
-    color: white;
-    font-size: 16px;
     cursor: pointer;
 }
 
-.button-group button:hover {
-    background-color: #0041a3;
+.btn button {
+    padding: 0.8vw 0;
+    border-radius: 30vw;
+    background: var(--gradient1, linear-gradient(90deg, #66B4FF 0%, #0055C9 100%));
+    color: #ffffff;
+    border: none;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn button:hover {
+    transform: scale(0.9); 
+}
+
+.btnn button {
+    padding: 0.8vw 0;
+    border-radius: 30vw;
+    background: linear-gradient(90deg, #DEEFFF 0%, #B0D8FF 120%);
+    color: #0049A8;
+    border: none;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+}
+
+.btnn button:hover {
+    transform: scale(0.9); 
 }
 
 #error{
@@ -519,7 +549,12 @@ input::placeholder {
     text-align: center;
 }
 
-#footer-button {
+.footer-button {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 2vw;
     justify-content: flex-start;
     gap: 1.7vw;
 }
@@ -529,13 +564,47 @@ input::placeholder {
     color: #7790b2;
 }
 
-#footer_button {
+.footer_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 30vw;
+    background: #66B4FF;
     width: 4vw;
     height: 4vw;
 }
 
+.footer_button img{
+    width: 50%;
+}
+
+.footer_button:hover img{
+    animation: bounce-skills 0.6s;
+}
+
 #facebook {
     width: 1.3vw;
+}
+
+@keyframes bounce-skills{
+    0%{
+        transform: translate(0);
+    }
+    20%{
+        transform: translateY(-5px);
+    }
+    40%{
+        transform: translate(0);
+    }
+    60%{
+        transform: translateY(-2px);
+    }
+    80%{
+        transform: translate(0);
+    }
 }
 
 @media screen and (max-width: 1200px) {

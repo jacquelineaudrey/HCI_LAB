@@ -918,16 +918,16 @@ p {
 .tiga-ceklis-content{
     border-left: 1px solid #ffffff; 
     padding-left: 6vw;
-    padding-bottom: 1vw;
+    padding-bottom: 1.5vw;
     display: flex;
     flex-direction: column;
-    gap: 0.7vw;
+    gap: 0.3vw;
     width: 38vw;
     padding-right: 1vw;
 }
 
 .tiga-ceklis-content h4 {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     line-height: 0.9vw;
     font-weight: 400;
     align-items: center;
@@ -1111,7 +1111,7 @@ p {
         padding-right: 1vw;
     }
     .tiga-ceklis-content h4 {
-        font-size: 1.9vw;
+        font-size: 1.7vw;
     }
     #blue-card {
         display: flex;

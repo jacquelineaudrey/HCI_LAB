@@ -256,29 +256,51 @@ body {
     justify-content: center;
     align-items: center;
     background: #DEEFFF;
-    padding-top: 12vw;
-    padding-bottom: 5vw;
+    background: linear-gradient(117deg, #FFF 0%, #DEEFFF 70.61%);
+    padding-top: 11.5vw;
+    padding-bottom: 6vw;
 }
 
-.container {
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.header-title{
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5vw;
+    color: #0049A8;
+}
+
+.header-subtitle{
+    margin-bottom: 5vw;
+    font-size: 17px;
+    line-height: 45px;
+    font-weight: 500;
+}
+
+.subs-packages {
     width: 100%;
     padding: 0 6.5vw;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     justify-content: space-between;
+    text-align: start;
 }
 
 .table {
     background: #ffffff;
     width: calc(25% - 22px);
-    padding: 60px 40px 40px 40px;
-    border-radius: 40px;
+    padding: 80px 40px 50px 40px;
+    border-radius: 3vw;
     box-shadow: 0px 4px 20px 0px rgba(0, 73, 168, 0.15);
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s;
 }
 
 @media screen and (max-width: 1200px) {
@@ -302,6 +324,10 @@ body {
     }
 }
 
+.table:hover {
+    transform: translateY(-10px);
+}
+
 /* Price section styling */
 .price-section {
     display: flex;
@@ -319,7 +345,8 @@ body {
 .inner-area {
     height: 100%;
     width: 100%;
-    background: #0055C9;
+    background: #4da5f7;
+    /* background: #0049A8; */
     border-radius: 50%;
     border: 3px solid #ffffff;
     color: #ffffff;
@@ -345,7 +372,7 @@ body {
     width: 100%;
     height: 2px;
     background: #B0D8FF;
-    margin: 60px 0;
+    margin: 50px 0;
     position: relative;
 }
 
@@ -375,9 +402,8 @@ body {
 
 .list-name {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 24px;
     font-weight: 400;
-    letter-spacing: 0.1px;
     width: 80%;
 }
 
@@ -391,7 +417,7 @@ body {
 
 .button-card {
     width: 100%;
-    padding: 0.8vw 0;
+    padding: 0.5vw 0;
     border-radius: 30vw;
     background: var(--gradient1, linear-gradient(90deg, #66B4FF 0%, #0055C9 100%));
     color: #ffffff;
@@ -433,8 +459,31 @@ body {
     content: "Explorer";
 }
 
+.achiever {
+    background: #0049A8;
+    background: linear-gradient(25deg, #47a6ff 1.5%, #246EC6 4.12%, #0049A8 7.51%, #0049A8 91.31%, #246EC6 95.62%, #47a6ff 98.18%);
+    color: #ffffff;
+}
+
 .achiever .package-name::before{
     content: "Achiever";
+    background: #0049A8;
+}
+
+.achiever .inner-area{
+    /* border: none; */
+    background: #0049A8;
+}
+
+.achiever .price-area{
+    /* padding: 0; */
+    background: #66B4FF;
+}
+
+.achiever .btn button{
+    background: white;
+    color: #001F4A;
+    font-weight: 500;
 }
 
 .master .package-name::before{
@@ -561,13 +610,63 @@ body {
     color: #7790b2;
 }
 
-#footer_button {
+
+.footer-button {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 2vw;
+    justify-content: flex-start;
+    gap: 1.7vw;
+}
+
+.footer-bs p {
+    font-size: 1.2vw;
+    color: #7790b2;
+}
+
+.footer_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 30vw;
+    background: #66B4FF;
     width: 4vw;
     height: 4vw;
 }
 
+.footer_button img{
+    width: 50%;
+}
+
+.footer_button:hover img{
+    animation: bounce-skills 0.6s;
+}
+
 #facebook {
     width: 1.3vw;
+}
+
+@keyframes bounce-skills{
+    0%{
+        transform: translate(0);
+    }
+    20%{
+        transform: translateY(-5px);
+    }
+    40%{
+        transform: translate(0);
+    }
+    60%{
+        transform: translateY(-2px);
+    }
+    80%{
+        transform: translate(0);
+    }
 }
 
 @media screen and (max-width: 1200px) {

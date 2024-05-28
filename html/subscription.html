@@ -1,230 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HCI_LAB_JacquelineAudreyIman</title>
-    <link rel="stylesheet" href="../css/subscription.css">
-</head>
+    <link rel="stylesheet" href="../css/subscription.css" />
+  </head>
 
-<body>
+  <body>
     <!-- NAVBAR  -->
-    <header class="header">
-        <div class="logo-wrapper">
-            <a href="./home.html" id="hero">Jensdemy</a>
-            <div class="logo-img">
-                <a href="./home.html"><img src="../assets/logo.png" alt="Jensdemy Logo"></a>
-            </div>
+    <navbar class="header">
+      <div class="logo-wrapper">
+        <a href="./home.html" id="hero">Jensdemy</a>
+        <div class="logo-img">
+          <a href="./home.html"
+            ><img src="../assets/logo.png" alt="Jensdemy Logo"
+          /></a>
         </div>
+      </div>
 
-        <input type="checkbox" id="check">
-        <label for="check" class="icons">
-            <img id="menu-icon" src="../assets/burger-bar (1).png" alt="">
-            <img id="close-icon" src="../assets/close (2).png" alt="">
-        </label>
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <img id="menu-icon" src="../assets/burger-bar (1).png" alt="" />
+        <img id="close-icon" src="../assets/close (2).png" alt="" />
+      </label>
 
-        <nav class="navbar">
-            <a href="./home.html">Home</a>
-            <a href="./subscription.html">Subscription</a>
-            <a href="./testimony.html">Testimony</a>
-            <a href="./learn.html">Learn</a>
-        </nav>
+      <nav class="navbar">
+        <a href="./home.html">Home</a>
+        <a href="./subscription.html">Subscription</a>
+        <a href="./testimonyy.html">Testimony</a>
+        <a href="./learn.html">Learn</a>
+      </nav>
 
-        <div class="button-wrapper">
-            <a href="./register.html" class="button1">Get Started</a>
-        </div>
-    </header>
+      <div class="button-wrapper">
+        <a href="./register.html" class="button1">Get Started</a>
+      </div>
+    </navbar>
 
     <!-- ISI SUBSCRIPTION PAGE  -->
     <div class="isi">
-        <div class="container">
-            <h3 class="header-title">Subscription Packages</h3>
-            <div class="header-subtitle">
-                <h1>Explore for free and unlock our</h1>
-                <h1>additional features later on.</h1>
-            </div>
-            <div class="subs-packages">  
-                <div class="table free">
-                    <div class="price-section">
-                        <div class="price-area">
-                            <div class="inner-area">
-                                <span class="text">$</span>
-                                <span class="price">0</span>
-                                <span class="month">/mo</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="package-name"></div>
-                    <div class="features">
-                        <li>
-                            <span class="list-name">1 Free Course</span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                        <li>
-                            <span class="list-name">1 Video Only</span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                        <li>
-                            <span class="list-name">Community Forum </span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                        <li>
-                            <span class="list-name">Personalized Tutoring</span>
-                            <span class="icon cross"><img src="../assets/wrong-subscription.png" alt=""></span>
-                        </li>
-                    </div>
-                    <div class="btn">
-                        <button onclick="window.location.href='./register.html'">Subscribe</button>
-                    </div>
-                </div>
-        
-                <div class="table explorer">
-                    <div class="price-section">
-                        <div class="price-area">
-                            <div class="inner-area">
-                                <span class="text">$</span>
-                                <span class="price">19.99</span>
-                                <span class="month">/mo</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="package-name"></div>
-                    <div class="features">
-                        <li>
-                            <span class="list-name">2 Courses </span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                        <li>
-                            <span class="list-name">5 Videos/Course</span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                        <li>
-                            <span class="list-name">Community Forum </span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                        <li>
-                            <span class="list-name">Personalized Tutoring</span>
-                            <span class="icon cross"><img src="../assets/wrong-subscription.png" alt=""></span>
-                        </li>
-                    </div>
-                    <div class="btn">
-                        <button onclick="window.location.href='./register.html'">Subscribe</button>
-                    </div>
-                </div>
-        
-                <div class="table achiever">
-                    <div class="ribbon"><span>Best Selling</span></div>
-                    <div class="price-section">
-                        <div class="price-area">
-                            <div class="inner-area">
-                                <span class="text">$</span>
-                                <span class="price">51.99</span>
-                                <span class="month">/mo</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="package-name"></div>
-                    <div class="features">
-                        <li>
-                            <span class="list-name">3 Courses </span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                        <li>
-                            <span class="list-name">7 Videos/Course</span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                        <li>
-                            <span class="list-name">Community Forum </span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                        <li>
-                            <span class="list-name">2 Sessions Tutoring</span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                    </div>
-                    <div class="btn">
-                        <button onclick="window.location.href='./register.html'">Subscribe</button>
-                    </div>
-                </div>
-        
-                <div class="table master">
-                    <div class="price-section">
-                        <div class="price-area">
-                            <div class="inner-area">
-                                <span class="text">$</span>
-                                <span class="price">89.99</span>
-                                <span class="month">/mo</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="package-name"></div>
-                    <div class="features">
-                        <li>
-                            <span class="list-name">Unlimited Courses </span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                        <li>
-                            <span class="list-name">Unlimited Videos </span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                        <li>
-                            <span class="list-name">Community Forum </span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                        <li>
-                            <span class="list-name">Unlimited Tutoring</span>
-                            <span class="icon check"><img src="../assets/check-subscription.png" alt=""></span>
-                        </li>
-                    </div>
-                    <div class="btn">
-                        <button onclick="window.location.href='./register.html'">Subscribe</button>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <header>
+          <h3 class="header-title">Subscription Packages</h3>
+          <div class="header-subtitle">
+            <h1>Explore for free and unlock our</h1>
+            <h1>additional features later on.</h1>
+          </div>
+        </header>
+        <div class="header-switch">
+          <div class="switch">
+            <span class="switch-label active">Monthly</span>
+            <div class="switch-thumb"></div>
+            <span class="switch-label inactive">Yearly</span>
+          </div>
         </div>
+        
+        
+        <div class="subs-packages">
+          <div class="table free" data-type="free">
+            <div class="price-section">
+              <div class="price-area">
+                <div class="inner-area">
+                  <span class="text">$</span>
+                  <span class="price">0</span>
+                  <span class="month">/mo</span>
+                </div>
+              </div>
+            </div>
+            <div class="package-name"></div>
+            <div class="features">
+              <li>
+                <span class="list-name">1 Free Course</span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+              <li>
+                <span class="list-name">1 Video Only</span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+              <li>
+                <span class="list-name">Community Forum </span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+              <li>
+                <span class="list-name">Personalized Tutoring</span>
+                <span class="icon cross"
+                  ><img src="../assets/wrong-subscription.png" alt=""
+                /></span>
+              </li>
+            </div>
+            <div class="btn">
+              <button>
+                Current Plan
+              </button>
+            </div>
+          </div>
+
+          <div class="table explorer" data-type="explorer">
+            <div class="price-section">
+              <div class="price-area">
+                <div class="inner-area">
+                  <span class="text">$</span>
+                  <span class="price">19.99</span>
+                  <span class="month">/mo</span>
+                </div>
+              </div>
+            </div>
+            <div class="package-name"></div>
+            <div class="features">
+              <li>
+                <span class="list-name">2 Courses/Month </span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+              <li>
+                <span class="list-name">5 Videos/Course</span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+              <li>
+                <span class="list-name">Community Forum </span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+              <li>
+                <span class="list-name">Personalized Tutoring</span>
+                <span class="icon cross"
+                  ><img src="../assets/wrong-subscription.png" alt=""
+                /></span>
+              </li>
+            </div>
+            <div class="btn">
+              <button onclick="window.location.href='./register.html'">
+                Subscribe
+              </button>
+            </div>
+          </div>
+
+          <div class="table achiever" data-type="achiever">
+            <div class="ribbon"><span>Best Selling</span></div>
+            <div class="price-section">
+              <div class="price-area">
+                <div class="inner-area">
+                  <span class="text">$</span>
+                  <span class="price">51.99</span>
+                  <span class="month">/mo</span>
+                </div>
+              </div>
+            </div>
+            <div class="package-name"></div>
+            <div class="features">
+              <li>
+                <span class="list-name">3 Courses/Month </span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+              <li>
+                <span class="list-name">7 Videos/Course</span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+              <li>
+                <span class="list-name">Community Forum </span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+              <li>
+                <span class="list-name">Personalized Tutoring</span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+            </div>
+            <div class="btn">
+              <button onclick="window.location.href='./register.html'">
+                Subscribe
+              </button>
+            </div>
+          </div>
+
+          <div class="table master" data-type="master">
+            <div class="price-section">
+              <div class="price-area">
+                <div class="inner-area">
+                  <span class="text">$</span>
+                  <span class="price">89.99</span>
+                  <span class="month">/mo</span>
+                </div>
+              </div>
+            </div>
+            <div class="package-name"></div>
+            <div class="features">
+              <li>
+                <span class="list-name">Unlimited Courses </span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+              <li>
+                <span class="list-name">Unlimited Videos </span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+              <li>
+                <span class="list-name">Community Forum </span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+              <li>
+                <span class="list-name">Personalized Tutoring</span>
+                <span class="icon check"
+                  ><img src="../assets/check-subscription.png" alt=""
+                /></span>
+              </li>
+            </div>
+            <div class="btn">
+              <button onclick="window.location.href='./register.html'">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
+
     <!-- FOOTER  -->
     <footer class="footer">
-        <div class="bagiDuaFooter">
-            <div class="footerIsiTiga">
-                <div class="footerTigaAtas">
-                    <div class="footerTigaBox">
-                        <div class="title">
-                            <h4>Jensdemy</h4>
-                            <img src="../assets/logo.png" alt="">
-                        </div>
-                        <p>Jensdemy is an online learning platform that empowers success from elementary to college.</p>
-                    </div>
-                    <div class="footerTigaBox">
-                        <div class="title">
-                            <h4>Contact</h4>
-                        </div>
-                        <div class="contact-footer">
-                            <p>johndoe@jensdemy.com</p>
-                            <p>Cemara Hijau, D1234, West Jakarta, Indonesia</p>
-                            <p>+62 822 7618 2818</p>
-                        </div>
-                    </div>
-                    <div class="footerTigaBox" id="subscribe-footer">
-                        <div class="title">
-                            <h4>Subscribe</h4>
-                        </div>
-                        <p>Subscribe to Jensdemy to access our exclusive features and courses.</p>
-                        <a href="./register.html" class="button1" id="footer-btn">Subscribe</a>
-                    </div>
-                </div>
+      <div class="bagiDuaFooter">
+        <div class="footerIsiTiga">
+          <div class="footerTigaAtas">
+            <div class="footerTigaBox">
+              <div class="title">
+                <h4>Jensdemy</h4>
+                <img src="../assets/logo.png" alt="" />
+              </div>
+              <p>
+                Jensdemy is an online learning platform that empowers success
+                from elementary to college.
+              </p>
             </div>
-
-            <div class="footer-bs">
-                <div class="footer-button">
-                    <a href="#" target="_blank" class="footer_button"><img id="facebook" src="../assets/facebook.png" alt=""></a>
-                    <a href="#" target="_blank" class="footer_button"><img src="../assets/twitter.png" alt=""></a>
-                    <a href="#" target="_blank" class="footer_button"><img src="../assets/instagram.png" alt=""></a>
-                </div>
-                <p>© 2024 Jacqueline Audrey Iman. All rights reserved</p>
+            <div class="footerTigaBox">
+              <div class="title">
+                <h4>Contact</h4>
+              </div>
+              <div class="contact-footer">
+                <p>johndoe@jensdemy.com</p>
+                <p>Cemara Hijau, D1234, West Jakarta, Indonesia</p>
+                <p>+62 822 7618 2818</p>
+              </div>
             </div>
+            <div class="footerTigaBox" id="subscribe-footer">
+              <div class="title">
+                <h4>Subscribe</h4>
+              </div>
+              <p>
+                Subscribe to Jensdemy to access our exclusive features and
+                courses.
+              </p>
+              <a href="./register.html" class="button1" id="footer-btn"
+                >Subscribe</a
+              >
+            </div>
+          </div>
         </div>
+
+        <div class="footer-bs">
+          <div class="footer-button">
+            <a href="#" target="_blank" class="footer_button"
+              ><img id="facebook" src="../assets/facebook.png" alt=""
+            /></a>
+            <a href="#" target="_blank" class="footer_button"
+              ><img src="../assets/twitter.png" alt=""
+            /></a>
+            <a href="#" target="_blank" class="footer_button"
+              ><img src="../assets/instagram.png" alt=""
+            /></a>
+          </div>
+          <p>© 2024 Jacqueline Audrey Iman. All rights reserved</p>
+        </div>
+      </div>
     </footer>
-</body>
+
+    <script src="../js/subscription.js"></script>
+  </body>
 </html>

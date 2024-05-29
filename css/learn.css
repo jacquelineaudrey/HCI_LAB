@@ -295,33 +295,74 @@ body {
   font-weight: 500;
 }
 
-.button-selection{
+.button-selection {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
+  margin-bottom: 4vw;
 }
 
-.btn-level{
-  width: 140px;
+.btn-level {
+  width: auto;
+  padding: 1vw 2vw;
   background-color: white;
   color: #001f4a;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 73, 168, 0.2);
   font-size: 14px;
   border: none;
   border-radius: 3vw;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.search-field{
-  
+.btn-level:hover {
+  background-color: #0055c9;
+  color: #ffffff;
+}
+
+.search-field {
+  position: relative;
+  width: 55vw;
+}
+
+#search {
+  width: 100%;
+  padding: 1vw 2.5vw;
+  border: none;
+  border-radius: 3vw;
+  border: 1px solid #66b4ff;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+#search:focus {
+  box-shadow: 0 0 10px rgba(0, 73, 168, 0.2);
+  border: 1px solid #0049a8;
+  outline: none;
+}
+
+.search-btn {
+  position: absolute;
+  right: 2.5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-btn img {
+  width: 16px;
+  height: 16px;
 }
 
 .video-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 6.5vw;
-  gap: 25px;
+  padding: 0 6.5vw;
+  gap: 1.5vw;
   width: 100%;
 }
 
@@ -402,7 +443,7 @@ body {
   text-align: start;
   display: flex;
   flex-direction: column;
-  padding: 1.4vw 1.7vw 1vw 1.7vw;
+  padding: 1.4vw 1.7vw 2vw 1.7vw;
 }
 
 .top-card {
@@ -419,11 +460,13 @@ body {
   font-size: 18px;
   line-height: 25px;
   font-weight: 700;
+  margin-bottom: 2vw;
 }
 
 .bottom-card {
   margin-top: -0.5vw;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -445,7 +488,63 @@ body {
 }
 
 .love-black {
-  transform: scale(0.3) translateX(90px);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+/*=========== error message ==========*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.upgrade-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.upgrade-button:hover {
+  background-color: #0056b3;
 }
 
 /* ================================ FOOTER ================================= */

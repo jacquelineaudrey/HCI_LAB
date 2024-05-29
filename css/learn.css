@@ -268,8 +268,184 @@ body {
   align-items: center;
   background: #deefff;
   background: linear-gradient(117deg, #fff 0%, #deefff 70.61%);
-  padding-top: 9vw;
+  padding-top: 11.5vw;
   padding-bottom: 6vw;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5vw;
+  color: #0049a8;
+}
+
+.header-subtitle {
+  margin-bottom: 3vw;
+  font-size: 17px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.button-selection{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-level{
+  width: 140px;
+  background-color: white;
+  color: #001f4a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  border: none;
+  border-radius: 3vw;
+  cursor: pointer;
+}
+
+.search-field{
+  
+}
+
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 6.5vw;
+  gap: 25px;
+  width: 100%;
+}
+
+.video-card {
+  background-color: #ffffff;
+  width: 100%;
+  box-shadow: 0px 4px 20px 0px rgba(0, 73, 168, 0.15);
+  border-radius: 1vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.course-img {
+  width: 100%;
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* lgsg dari youtube */
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.course-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: height 0.3s ease;
+}
+
+.play-button {
+  top: 50%;
+  width: 25%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+  height: 100%;
+}
+
+.image-container:hover .play-button {
+  opacity: 1;
+}
+
+.image-container:hover .course-img {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+.video-text {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  padding: 1.4vw 1.7vw 1vw 1.7vw;
+}
+
+.top-card {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1vw;
+}
+
+.top-text {
+  font-size: 12px;
+}
+
+.course-name {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+}
+
+.bottom-card {
+  margin-top: -0.5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.teacher {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.teacher-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.teacher-img {
+  width: 20%;
+  height: auto;
+}
+
+.love-black {
+  transform: scale(0.3) translateX(90px);
 }
 
 /* ================================ FOOTER ================================= */

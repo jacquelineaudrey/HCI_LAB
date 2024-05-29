@@ -39,11 +39,22 @@ body {
 }
 
 #hero{
-    margin-right: 7px; 
-    font-size: 2vw;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px; 
+    font-size: 1.8vw;
+    line-height: 1.5vw;
     font-weight: 1000;
+    letter-spacing: 0.1px;
     text-decoration: none;
     color: #001F4A;
+    text-align: start;
+}
+
+.logo-bawah {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
 }
 
 #hero:hover {
@@ -52,7 +63,7 @@ body {
 }
 
 .logo-img img {
-    height: 2.2vw; 
+    height: 2.7vw; 
 }
 
 #check {

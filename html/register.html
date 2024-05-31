@@ -6,6 +6,7 @@
     <title>HCI_LAB_JacquelineAudreyIman</title>
     <link rel="stylesheet" href="../css/register.css" />
   </head>
+
   <body>
     <!-- NAVBAR  -->
     <navbar class="header">
@@ -44,71 +45,74 @@
           <form id="form">
             <div class="fields">
               <div class="input-field">
-                <label for="username">Username : </label>
+                <label for="username">Username :</label>
                 <input
                   type="text"
                   name="username"
                   id="username"
                   placeholder="Enter username"
                 />
+                <div class="error-message" id="username-error"></div>
               </div>
 
               <div class="input-field">
-                <label for="dob">Date of Birth : </label>
+                <label for="dob">Date of Birth :</label>
                 <input type="date" name="dob" id="date" />
+                <div class="error-message" id="date-error"></div>
               </div>
 
               <div class="input-field">
-                <label for="email">Email</label>
+                <label for="phonenumber">Phone Number :</label>
+                <input
+                  type="tel"
+                  name="phonenumber"
+                  id="phonenumber"
+                  placeholder="Enter phone number"
+                />
+                <div class="error-message" id="phonenumber-error"></div>
+              </div>
+
+              <div class="input-field">
+                <label for="email">Email :</label>
                 <input
                   type="email"
                   name="email"
                   id="email"
                   placeholder="Enter email"
                 />
+                <div class="error-message" id="email-error"></div>
               </div>
 
               <div class="input-field">
-                <label for="password">Password : </label>
+                <label for="password">Password :</label>
                 <input
                   type="password"
                   name="password"
                   id="password"
                   placeholder="Enter password"
                 />
+                <div class="error-message" id="password-error"></div>
               </div>
 
               <div class="input-field">
-                <label for="confirmpassword">Confirm Password : </label>
+                <label for="confirmpassword">Confirm Password :</label>
                 <input
                   type="password"
                   name="confirmpassword"
                   id="confirmpassword"
                   placeholder="Enter password"
                 />
-              </div>
-
-              <div class="input-field">
-                <label for="gender">Gender : </label>
-
-                <div>
-                  <input type="radio" name="gender" id="male" value="male" />
-                  <label for="male">Male</label>
-                  <input
-                    type="radio"
-                    name="gender"
-                    id="female"
-                    value="female"
-                  />
-                  <label for="female">Female</label>
-                </div>
+                <div class="error-message" id="confirmpassword-error"></div>
               </div>
             </div>
 
             <div class="bottom-section">
-              <div class="checkbox-field">
-                <input type="checkbox" name="agree" id="agree" />
-                <label for="agree">Agree to terms and condition</label>
+              <div class="checkbox-section">
+                <div class="checkbox-field">
+                  <input type="checkbox" name="agree" id="agree" />
+                  <label for="agree">Agree to terms and conditions</label>
+                </div>
+                <div class="error-message" id="agree-error"></div>
               </div>
 
               <div class="button-group">
@@ -119,14 +123,11 @@
                   <button type="submit">Submit</button>
                 </div>
               </div>
-
-              <p id="error"></p>
             </div>
           </form>
         </div>
       </div>
     </main>
-
     <!-- FOOTER  -->
     <footer class="footer">
       <div class="bagiDuaFooter">

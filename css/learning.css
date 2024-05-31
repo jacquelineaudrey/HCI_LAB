@@ -1,0 +1,681 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+/*=============================== SIDEBAR =====================================*/
+
+.sidebar {
+  background-color: #deefff;
+  color: #001f4a;
+  flex: 1;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 38px 32px;
+}
+
+.top-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-button img {
+  width: 30px;
+  margin: 0;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.course-category {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 30px;
+  padding-left: 64px;
+  padding-top: 10px;
+}
+
+.header p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.teacher {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 1vw;
+  background-color: #f2f8fe;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teacher:hover {
+  background-color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.teacher-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px 10px;
+  border-radius: 1vw;
+}
+
+#teacher-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.icon {
+  width: 30px;
+  height: auto;
+}
+
+.status {
+  margin: auto;
+  padding: 10px 20px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1vw;
+}
+
+.locked {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.padlock {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .teacher {
+    padding: 10px;
+  }
+  .profile {
+    width: 40px;
+    height: auto;
+  }
+  .teacher-details {
+    gap: 0.9rem;
+  }
+  #teacher-name {
+    font-size: 14px;
+  }
+  .icon {
+    width: 25px;
+  }
+  .status {
+    display: none;
+  }
+  .padlock {
+    display: block;
+    width: 25px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .teacher {
+    padding: 20px;
+  }
+  .profile {
+    width: 50px;
+    height: auto;
+  }
+  .teacher-details {
+    gap: 1.2rem;
+  }
+  #teacher-name {
+    font-size: 16px;
+  }
+  .icon {
+    width: 30px;
+  }
+  .status {
+    display: block;
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .padlock {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .status {
+    display: none;
+  }
+  .padlock {
+    display: block;
+    margin-left: 10px;
+  }
+}
+
+.lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.lesson-active {
+  background-color: #0056b3 !important;
+}
+
+h3 {
+  line-height: 28px;
+}
+
+.lesson-active span,
+.lesson-active h3,
+.lesson-active p {
+  color: white !important;
+}
+
+.learning-objectives {
+  margin: 30px 0;
+}
+
+.learning-objectives h3 {
+  font-size: 20px;
+}
+
+.learning-objectives p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.lesson-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.lesson {
+  background-color: #ffffff;
+  padding: 22px 25px;
+  margin-bottom: 10px;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.lesson:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lesson-number {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #0d99ff;
+  margin-right: 20px;
+}
+
+.lesson-details h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  color: #0d99ff;
+}
+
+.lesson-details p {
+  margin: 5px 0 0 0;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/*================================ CONTENT ==================================*/
+
+.content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+/*============================= VIDEO MATERIALS ==============================*/
+
+.section-learning {
+  display: flex;
+  flex-direction: column;
+}
+
+.course-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px;
+}
+
+@media screen and (max-width: 1376px) {
+  .course-title {
+    margin: 30px 30px;
+  }
+}
+
+.video-title {
+  font-size: 20px;
+  line-height: 7px;
+  font-weight: 600;
+  color: #001f4a;
+  cursor: pointer;
+}
+
+.section-learning {
+  display: none;
+}
+
+.video-section {
+  background-color: #ffffff;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.video-wrapper {
+  max-height: 75vh;
+  width: 100%;
+  height: 100%;
+  background-color: #95a5a6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  outline: none;
+}
+
+.custom-play-button {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 1;
+}
+
+.custom-play-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+.exercise-button,
+.watch-button {
+  font-size: 16px;
+  position: relative;
+  /* top: 30px; */
+  right: 30px;
+  padding: 10px 25px;
+  background: var(
+    --gradient1,
+    linear-gradient(90deg, #66b4ff 0%, #0055c9 100%)
+  );
+  color: white;
+  border: none;
+  border-radius: 3vw;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.exercise-button:hover {
+  background-color: #2ecc71;
+  transform: scale(0.95);
+}
+
+.comments-section {
+  /* max-height: 28vh; */
+  background-color: #edf4fa;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #bdc3c7;
+  overflow-y: auto;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 1vw;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s;
+}
+
+.comment img {
+  width: 3vw;
+  height: auto;
+}
+
+.comment .name {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.comment-profile {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.reply-section {
+  display: flex;
+  align-items: center;
+}
+
+.reply-input {
+  flex: 1;
+  padding: 12px 20px;
+  border: 1px solid #66b4ff;
+  border-radius: 3vw;
+  margin-right: 15px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.reply-input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.reply-button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background: var(
+    --gradient1,
+    linear-gradient(90deg, #66b4ff 0%, #0055c9 100%)
+  );
+  color: white;
+  border: none;
+  border-radius: 3vw;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.reply-button:hover {
+  background-color: #0056b3;
+  transform: scale(0.95);
+}
+
+.input-section {
+  margin: 30px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.reply {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.replies {
+  margin: 20px;
+  margin-bottom: 0;
+}
+
+.replies .comment-profile img {
+  width: 40px;
+}
+
+.replies .comment-profile .name {
+  font-weight: bold;
+  color: #0055c9;
+}
+
+.comment-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 10px;
+}
+
+.teacher-name {
+  color: #0056b3 !important;
+}
+
+/*========================================= QUIZ/EXERCICES ======================================*/
+
+.question-section {
+  /* max-height: 95vh; */
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 35px 10px 35px 35px;
+}
+
+.watch-videos {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.watch-button {
+  padding: 15px 25px;
+}
+
+.watch-button:hover {
+  transform: scale(0.95);
+}
+
+.question-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.question {
+  width: 95%;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.choice-button {
+  background-color: #deefff;
+  color: #001f4a;
+  border: none;
+  padding: 20px;
+  margin: 7px 0;
+  border-radius: 1vw;
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.3s;
+}
+
+.choice-button:hover {
+  background-color: #0055c9;
+  color: #ffffff;
+}
+
+.choice-button.correct {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.choice-button.incorrect {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.show-answer-button {
+  background: var(
+    --gradient1,
+    linear-gradient(90deg, #66b4ff 0%, #0055c9 100%)
+  );
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 15px;
+  border-radius: 3vw;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.show-answer-button:hover {
+  transform: scale(0.95);
+}
+
+.correct-answer {
+  background-color: #28a745 !important;
+  color: #ffffff;
+}
+
+.correct-answer-text {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #28a745;
+  display: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#comment-input {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #66b4ff;
+  border-radius: 3vw;
+  margin-right: 10px;
+  width: 75%;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#comment-input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+#send-button {
+  padding: 12px 25px;
+  background: var(
+    --gradient1,
+    linear-gradient(90deg, #66b4ff 0%, #0055c9 100%)
+  );
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 3vw;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#send-button:hover {
+  background-color: #0056b3;
+  transform: scale(0.95);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.back-button {
+  margin: 7px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #007bff;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.back-button:hover {
+  color: #0056b3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

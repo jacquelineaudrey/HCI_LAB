@@ -1,58 +1,108 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.button-selection button');
-    const cards = document.querySelectorAll('.video-card');
-  
-    buttons.forEach(button => {
-      button.addEventListener('click', function() {
-        const level = button.getAttribute('data-level');
-        
-        // Update button styles to reflect the active button
-        buttons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-  
-        // Show/Hide cards based on the selected level
-        cards.forEach(card => {
-          if (card.getAttribute('data-level') === level) {
-            card.style.display = 'block';
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".button-selection button");
+  const cards = document.querySelectorAll(".video-card");
+  let currentLevel = "elementary";
+
+  const openModalButton = document.getElementById("open-modal-button");
+  const modal = document.getElementById("modal");
+  const closeButton = modal.querySelector(".close");
+  const upgradeButton = modal.querySelector("#upgrade-button");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const level = button.getAttribute("data-level");
+
+      buttons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      if (level !== "fav") {
+        currentLevel = level; // Update current level for non-fav buttons
+      }
+
+      cards.forEach((card) => {
+        if (level === "fav") {
+          if (card.getAttribute("data-level").includes("fav")) {
+            card.style.display = "block";
           } else {
-            card.style.display = 'none';
+            card.style.display = "none";
           }
-        });
+        } else {
+          if (card.getAttribute("data-level").includes(currentLevel)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        }
       });
     });
-  
-    // Optionally, you can trigger a click on one of the buttons to set a default view
-    document.getElementById('elementary-btn').click();
   });
 
-  
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const heartIcons = document.querySelectorAll('.heart-icon');
-    heartIcons.forEach(icon => {
-      icon.addEventListener('click', () => {
-        icon.classList.toggle('red');
-      });
+  document.getElementById("senior-btn").click();
+
+  closeButton.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  upgradeButton.addEventListener("click", function () {
+    window.location.href = "subscription.html";
+  });
+
+  window.addEventListener("click", function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  function performSearch() {
+    const searchTerm = document.getElementById("search").value.toLowerCase();
+
+    cards.forEach((card) => {
+      const courseName = card
+        .querySelector(".course-name")
+        .textContent.toLowerCase();
+      if (courseName.includes(searchTerm)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
     });
-  
-    const errorTriggerButtons = document.querySelectorAll('.play-button.error-trigger');
-    const modal = document.getElementById('errorModal');
-    const closeModal = document.querySelector('.close');
-  
-    errorTriggerButtons.forEach(button => {
-      button.addEventListener('click', (event) => {
-        event.preventDefault();
-        modal.style.display = 'block';
-      });
-    });
-  
-    closeModal.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-  
-    window.addEventListener('click', (event) => {
-      if (event.target === modal) {
-        modal.style.display = 'none';
+  }
+
+  document.getElementById("search-btn").addEventListener("click", performSearch);
+
+  document.getElementById("search").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      performSearch();
+    }
+  });
+
+  cards.forEach((card) => {
+    card.addEventListener("click", function () {
+      const level = card.getAttribute("data-level");
+
+      if (level === "elementary" || level === "senior") {
+        modal.style.display = "none";
+        window.location.href = "learning.html";
+      } else if (level === "junior") {
+        modal.style.display = "block";
       }
     });
   });
-  
+});
+
+function toggleFav(element) {
+  const videoCard = element.closest(".video-card");
+  const dataLevel = videoCard.getAttribute("data-level");
+
+  if (dataLevel.includes("fav")) {
+    modal.style.display = "none";
+    videoCard.setAttribute("data-level", dataLevel.replace(" fav", ""));
+    element.src = "../assets/love.png";
+    element.classList.remove("active-fav");
+  } else if (element.src.includes("love.png")) {
+    modal.style.display = "none";
+    element.src = "../assets/self-love.png";
+    videoCard.setAttribute("data-level", `${dataLevel} fav`);
+    element.classList.add("active-fav");
+  }
+}

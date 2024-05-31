@@ -58,7 +58,7 @@ body {
 }
 
 #hero:hover {
-    color: #0049A8;
+    color: #0049A8 ;
     transition: color 0.2s ease-in-out;
 }
 

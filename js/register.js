@@ -1,101 +1,104 @@
-document.getElementById("form").addEventListener("submit", handleSubmit)
-document.getElementById("reset-button").addEventListener("click", handleReset)
+document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-function handleSubmit(e) {
-    e.preventDefault()
-    let username = document.getElementById("username").value
-    let email = document.getElementById("email").value
-    let password = document.getElementById("password").value
-    let confirmpassword = document.getElementById("confirmpassword").value
-    let dob = document.getElementById("date").value
-    let male = document.getElementById("male").checked
-    let female = document.getElementById("female").checked
-    let agree = document.getElementById("agree").checked
+    let isValid = true;
 
-    let error = document.getElementById("error")
-
-    // Check if all fields are filled
-    if (username == "" || password == "" || confirmpassword == "" || email == "" || dob == "" || agree == false || (male == false && female == false)) {
-        error.innerText = "All fields must be filled"
-        return
+    const username = document.getElementById('username').value;
+    const usernameError = document.getElementById('username-error');
+    if (username === '') {
+        usernameError.textContent = 'Username is required';
+        isValid = false;
+    } else {
+        usernameError.textContent = '';
     }
 
-    // Check username length
-    if (username.length <= 8) {
-        error.innerText = "Username length must be more than 8"
-        return
+    const date = document.getElementById('date').value;
+    const dateError = document.getElementById('date-error');
+    if (date === '') {
+        dateError.textContent = 'Date of Birth is required';
+        isValid = false;
+    } else {
+        dateError.textContent = '';
     }
 
-    // Check age (at least 5 years old)
-    if (!isValidAge(dob, 5)) {
-        error.innerText = "You must be at least 5 years old"
-        return
+    const email = document.getElementById('email').value;
+    const emailError = document.getElementById('email-error');
+    if (email === '') {
+        emailError.textContent = 'Email is required';
+        isValid = false;
+    } else if (!validateEmail(email)) {
+        emailError.textContent = 'Invalid email format';
+        isValid = false;
+    } else {
+        emailError.textContent = '';
     }
 
-    // Check email format
-    if (!email.endsWith("@gmail.com")) {
-        error.innerText = "Email must end with @gmail.com"
-        return
-    }
-    
-    // Check password requirements
-    let passwordError = goodPassword(password)
-    if (passwordError != "") {
-        error.innerText = passwordError
-        return
+    const password = document.getElementById('password').value;
+    const passwordError = document.getElementById('password-error');
+    if (password === '') {
+        passwordError.textContent = 'Password is required';
+        isValid = false;
+    } else {
+        passwordError.textContent = '';
     }
 
-    // Check if passwords match
-    if (password != confirmpassword) {
-        error.innerText = "Password and confirm password must be the same"
-        return
+    const confirmPassword = document.getElementById('confirmpassword').value;
+    const confirmPasswordError = document.getElementById('confirmpassword-error');
+    if (confirmPassword === '') {
+        confirmPasswordError.textContent = 'Confirm Password is required';
+        isValid = false;
+    } else if (confirmPassword !== password) {
+        confirmPasswordError.textContent = 'Passwords do not match';
+        isValid = false;
+    } else {
+        confirmPasswordError.textContent = '';
     }
 
-    // If all validations pass, navigate to home page
-    window.location.href = "home.html"
+    const phoneNumber = document.getElementById('phonenumber').value;
+    const phoneNumberError = document.getElementById('phonenumber-error');
+    if (phoneNumber === '') {
+        phoneNumberError.textContent = 'Phone number is required';
+        isValid = false;
+    } else if (!validatePhoneNumber(phoneNumber)) {
+        phoneNumberError.textContent = 'Invalid phone number format';
+        isValid = false;
+    } else {
+        phoneNumberError.textContent = '';
+    }
+
+    const agree = document.getElementById('agree').checked;
+    const agreeError = document.getElementById('agree-error');
+    if (!agree) {
+        agreeError.textContent = 'You must agree to the terms and conditions';
+        isValid = false;
+    } else {
+        agreeError.textContent = '';
+    }
+
+    if (isValid) {
+        alert('Form submitted successfully!');
+    }
+});
+
+function validateEmail(email) {
+    // Basic email validation without regex
+    const atSymbolIndex = email.indexOf('@');
+    const dotSymbolIndex = email.lastIndexOf('.');
+    return (
+        atSymbolIndex > 0 &&
+        dotSymbolIndex > atSymbolIndex + 1 &&
+        dotSymbolIndex < email.length - 1
+    );
 }
 
-function goodPassword(password) {
-    let number = 0
-    let character = 0
-    for (let i = 0; i < password.length; i++) {
-        // Check if password has letters
-        if (isNaN(password[i])) {
-            character = 1
+function validatePhoneNumber(phoneNumber) {
+    if (phoneNumber.length < 10 || phoneNumber.length > 15) {
+        return false;
+    }
+    for (let i = 0; i < phoneNumber.length; i++) {
+        if (isNaN(phoneNumber[i]) || phoneNumber[i] === ' ') {
+            return false;
         }
-        // Check if password has numbers
-        else if (!isNaN(password[i])) {
-            number = 1
-        }
     }
-    if (number == 0) {
-        return "Password must contain a number"
-    }
-    if (character == 0) {
-        return "Password must contain a character"
-    }
-    return ""
-}
-
-function handleReset() {
-    document.getElementById("username").value = ""
-    document.getElementById("email").value = ""
-    document.getElementById("password").value = ""
-    document.getElementById("confirmpassword").value = ""
-    document.getElementById("date").value = ""
-    document.getElementById("male").checked = false
-    document.getElementById("female").checked = false
-    document.getElementById("agree").checked = false
-    document.getElementById("error").innerText = ""
-}
-
-function isValidAge(dob, minAge) {
-    let birthDate = new Date(dob)
-    let today = new Date()
-    let age = today.getFullYear() - birthDate.getFullYear()
-    let monthDifference = today.getMonth() - birthDate.getMonth()
-    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
-        age--
-    }
-    return age >= minAge
+    return true;
 }

@@ -263,7 +263,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #deefff;
+  background: #deefff ;
   background: linear-gradient(117deg, #fff 0%, #deefff 70.61%);
   padding-top: 9vw;
   padding-bottom: 6vw;
@@ -350,7 +350,7 @@ body {
 .switch-label {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #0049a8;
+  color: #0049a8 ;
   flex: 1; 
   text-align: center;
 }
@@ -586,8 +586,8 @@ body {
 }
 
 .free button{
-  background: #deefff;
-  color: #0049A8;
+  background: #deefff ;
+  color: #0049A8 ;
 }
 
 .free button:hover {

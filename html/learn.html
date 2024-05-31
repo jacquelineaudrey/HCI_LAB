@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HCI_LAB_JacquelineAudreyIman</title>
+    <title>Learn Page</title>
     <link rel="stylesheet" href="../css/learn.css" />
   </head>
+
   <body>
     <!-- NAVBAR  -->
     <navbar class="header">
@@ -37,6 +38,17 @@
     </navbar>
 
     <div class="isi">
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>
+            You have reached your free video limit. Please upgrade your
+            subscription to continue.
+          </p>
+          <button id="upgrade-button">Upgrade Subscription</button>
+        </div>
+      </div>
+
       <div class="container">
         <header>
           <h3 class="header-title">Learn Page</h3>
@@ -45,6 +57,9 @@
           </div>
         </header>
         <div class="button-selection">
+          <button class="btn-level" id="fav-btn" data-level="fav">
+            Favorite
+          </button>
           <button class="btn-level" id="elementary-btn" data-level="elementary">
             Elementary
           </button>
@@ -56,49 +71,20 @@
           </button>
           <div class="search-field">
             <input type="text" id="search" placeholder="Search course name" />
-            <div class="search-btn">
-              <img src="../assets/search.png" alt="" />
+            <div class="search-img">
+              <button id="search-btn">
+                <img src="../assets/search.png" alt="" />
+              </button>
             </div>
           </div>
         </div>
 
         <div class="video-container">
-          <!-- <div class="video-card" data-level="elementary">
-            <div class="video-wrapper">
-              <iframe
-                class="course-video"
-                src="https://www.youtube.com/embed/M0WcSCxYl2Y?autoplay=0&mute=1"
-                frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="video-text">
-              <div class="top-card">
-                <p class="top-text">5 sessions</p>
-                <p class="top-text">2h 30min</p>
-              </div>
-              <h1 class="course-name">TRIGONOMETRY & INTEGRAL</h1>
-              <div class="bottom-card">
-                <div class="teacher">
-                  <img
-                    class="teacher-img"
-                    src="../assets/teacher1.png"
-                    alt=""
-                  />
-                  <p class="teacher-name">Mr.Smith</p>
-                </div>
-                <img class="love-black" src="../assets/love.png" alt="" />
-              </div>
-            </div>
-          </div> -->
-
           <div class="video-card" data-level="elementary">
             <div class="image-container">
-              <img class="course-img" src="../assets/course1.jpg" alt="" />
+              <img class="course-img" src="../assets/course10.jpeg" alt="" />
               <div class="overlay">
                 <img
-                  onclick="window.location.href='./course.html'"
                   class="play-button"
                   src="../assets/play-button.png"
                   alt="Play"
@@ -108,29 +94,33 @@
             <div class="video-text">
               <div class="top-card">
                 <p class="top-text">5 sessions</p>
-                <p class="top-text">2h 30min</p>
+                <p class="top-text">41 min 43 sec</p>
               </div>
-              <h1 class="course-name">TRIGONOMETRY & INTEGRAL</h1>
+              <h1 class="course-name">Grade 6 Art and Music</h1>
               <div class="bottom-card">
                 <div class="teacher">
                   <img
                     class="teacher-img"
-                    src="../assets/teacher1.png"
+                    src="../assets/teacher10.png"
                     alt=""
                   />
-                  <p class="teacher-name">Mr. Smith</p>
+                  <p class="teacher-name">Ms. Renata Heinry</p>
                 </div>
-                <img class="love-black" src="../assets/love.png" alt="" />
+                <img
+                  class="love-black"
+                  src="../assets/love.png"
+                  alt=""
+                  onclick="toggleFav(this)"
+                />
               </div>
             </div>
           </div>
 
           <div class="video-card" data-level="elementary">
             <div class="image-container">
-              <img class="course-img" src="../assets/course1.jpg" alt="" />
+              <img class="course-img" src="../assets/course11.jpeg" alt="" />
               <div class="overlay">
                 <img
-                  onclick="window.location.href='./course.html'"
                   class="play-button"
                   src="../assets/play-button.png"
                   alt="Play"
@@ -142,219 +132,103 @@
                 <p class="top-text">5 sessions</p>
                 <p class="top-text">2h 30min</p>
               </div>
-              <h1 class="course-name">TRIGONOMETRY & INTEGRAL</h1>
+              <h1 class="course-name">Grade 7 Mystery of Science</h1>
               <div class="bottom-card">
                 <div class="teacher">
                   <img
                     class="teacher-img"
-                    src="../assets/teacher1.png"
+                    src="../assets/teacher11.png"
                     alt=""
                   />
-                  <p class="teacher-name">Mr. Smith</p>
+                  <p class="teacher-name">Mr. Christopher</p>
                 </div>
-                <img class="love-black" src="../assets/love.png" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div class="video-card" data-level="elementary">
-            <div class="image-container">
-              <img class="course-img" src="../assets/course1.jpg" alt="" />
-              <div class="overlay">
                 <img
-                  onclick="window.location.href='./course.html'"
-                  class="play-button"
-                  src="../assets/play-button.png"
-                  alt="Play"
+                  class="love-black"
+                  src="../assets/love.png"
+                  alt=""
+                  onclick="toggleFav(this)"
                 />
-              </div>
-            </div>
-            <div class="video-text">
-              <div class="top-card">
-                <p class="top-text">5 sessions</p>
-                <p class="top-text">2h 30min</p>
-              </div>
-              <h1 class="course-name">TRIGONOMETRY & INTEGRAL</h1>
-              <div class="bottom-card">
-                <div class="teacher">
-                  <img
-                    class="teacher-img"
-                    src="../assets/teacher1.png"
-                    alt=""
-                  />
-                  <p class="teacher-name">Mr. Smith</p>
-                </div>
-                <img class="love-black" src="../assets/love.png" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div class="video-card" data-level="elementary">
-            <div class="image-container">
-              <img class="course-img" src="../assets/course1.jpg" alt="" />
-              <div class="overlay">
-                <img
-                  onclick="window.location.href='./course.html'"
-                  class="play-button"
-                  src="../assets/play-button.png"
-                  alt="Play"
-                />
-              </div>
-            </div>
-            <div class="video-text">
-              <div class="top-card">
-                <p class="top-text">5 sessions</p>
-                <p class="top-text">2h 30min</p>
-              </div>
-              <h1 class="course-name">TRIGONOMETRY & INTEGRAL</h1>
-              <div class="bottom-card">
-                <div class="teacher">
-                  <img
-                    class="teacher-img"
-                    src="../assets/teacher1.png"
-                    alt=""
-                  />
-                  <p class="teacher-name">Mr. Smith</p>
-                </div>
-                <img class="love-black" src="../assets/love.png" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div class="video-card" data-level="elementary">
-            <div class="image-container">
-              <img class="course-img" src="../assets/course1.jpg" alt="" />
-              <div class="overlay">
-                <img
-                  onclick="window.location.href='./course.html'"
-                  class="play-button"
-                  src="../assets/play-button.png"
-                  alt="Play"
-                />
-              </div>
-            </div>
-            <div class="video-text">
-              <div class="top-card">
-                <p class="top-text">5 sessions</p>
-                <p class="top-text">2h 30min</p>
-              </div>
-              <h1 class="course-name">TRIGONOMETRY & INTEGRAL</h1>
-              <div class="bottom-card">
-                <div class="teacher">
-                  <img
-                    class="teacher-img"
-                    src="../assets/teacher1.png"
-                    alt=""
-                  />
-                  <p class="teacher-name">Mr. Smith</p>
-                </div>
-                <img class="love-black" src="../assets/love.png" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div class="video-card" data-level="elementary">
-            <div class="image-container">
-              <img class="course-img" src="../assets/course1.jpg" alt="" />
-              <div class="overlay">
-                <img
-                  onclick="window.location.href='./course.html'"
-                  class="play-button"
-                  src="../assets/play-button.png"
-                  alt="Play"
-                />
-              </div>
-            </div>
-            <div class="video-text">
-              <div class="top-card">
-                <p class="top-text">5 sessions</p>
-                <p class="top-text">2h 30min</p>
-              </div>
-              <h1 class="course-name">TRIGONOMETRY & INTEGRAL</h1>
-              <div class="bottom-card">
-                <div class="teacher">
-                  <img
-                    class="teacher-img"
-                    src="../assets/teacher1.png"
-                    alt=""
-                  />
-                  <p class="teacher-name">Mr. Smith</p>
-                </div>
-                <img class="love-black" src="../assets/love.png" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div class="video-card" data-level="elementary">
-            <div class="image-container">
-              <img class="course-img" src="../assets/course1.jpg" alt="" />
-              <div class="overlay">
-                <img
-                  onclick="window.location.href='./course.html'"
-                  class="play-button"
-                  src="../assets/play-button.png"
-                  alt="Play"
-                />
-              </div>
-            </div>
-            <div class="video-text">
-              <div class="top-card">
-                <p class="top-text">5 sessions</p>
-                <p class="top-text">2h 30min</p>
-              </div>
-              <h1 class="course-name">TRIGONOMETRY & INTEGRAL</h1>
-              <div class="bottom-card">
-                <div class="teacher">
-                  <img
-                    class="teacher-img"
-                    src="../assets/teacher1.png"
-                    alt=""
-                  />
-                  <p class="teacher-name">Mr. Smith</p>
-                </div>
-                <img class="love-black" src="../assets/love.png" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div class="video-card" data-level="elementary">
-            <div class="image-container">
-              <img class="course-img" src="../assets/course1.jpg" alt="" />
-              <div class="overlay">
-                <img
-                  onclick="window.location.href='./course.html'"
-                  class="play-button"
-                  src="../assets/play-button.png"
-                  alt="Play"
-                />
-              </div>
-            </div>
-            <div class="video-text">
-              <div class="top-card">
-                <p class="top-text">5 sessions</p>
-                <p class="top-text">2h 30min</p>
-              </div>
-              <h1 class="course-name">TRIGONOMETRY & INTEGRAL</h1>
-              <div class="bottom-card">
-                <div class="teacher">
-                  <img
-                    class="teacher-img"
-                    src="../assets/teacher1.png"
-                    alt=""
-                  />
-                  <p class="teacher-name">Mr. Smith</p>
-                </div>
-                <img class="love-black" src="../assets/love.png" alt="" />
               </div>
             </div>
           </div>
 
           <div class="video-card" data-level="junior">
             <div class="image-container">
-              <img class="course-img" src="../assets/course1.jpg" alt="" />
+              <img class="course-img" src="../assets/course7.jpeg" alt="" />
               <div class="overlay">
                 <img
-                  onclick="window.location.href='./course.html'"
+                  class="play-button"
+                  src="../assets/play-button.png"
+                  alt="Play"
+                />
+              </div>
+            </div>
+            <div class="video-text">
+              <div class="top-card">
+                <p class="top-text">9 sessions</p>
+                <p class="top-text">1h 30min</p>
+              </div>
+              <h1 class="course-name">Grade 7 Language Arts</h1>
+              <div class="bottom-card">
+                <div class="teacher">
+                  <img
+                    class="teacher-img"
+                    src="../assets/teacher7.png"
+                    alt=""
+                  />
+                  <p class="teacher-name">Ms. Milly Jhonson</p>
+                </div>
+                <img
+                  class="love-black"
+                  src="../assets/love.png"
+                  alt=""
+                  onclick="toggleFav(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card" data-level="junior">
+            <div class="image-container">
+              <img class="course-img" src="../assets/course8.jpeg" alt="" />
+              <div class="overlay">
+                <img
+                  class="play-button"
+                  src="../assets/play-button.png"
+                  alt="Play"
+                />
+              </div>
+            </div>
+            <div class="video-text">
+              <div class="top-card">
+                <p class="top-text">18 sessions</p>
+                <p class="top-text">4h 15min</p>
+              </div>
+              <h1 class="course-name">Grade 8 Science and the Apllications</h1>
+              <div class="bottom-card">
+                <div class="teacher">
+                  <img
+                    class="teacher-img"
+                    src="../assets/teacher8.png"
+                    alt=""
+                  />
+                  <p class="teacher-name">Mr. Bryan Ardell</p>
+                </div>
+                <img
+                  class="love-black"
+                  src="../assets/love.png"
+                  alt=""
+                  onclick="toggleFav(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card" data-level="junior">
+            <div class="image-container">
+              <img class="course-img" src="../assets/course9.jpeg" alt="" />
+              <div class="overlay">
+                <img
                   class="play-button"
                   src="../assets/play-button.png"
                   alt="Play"
@@ -366,27 +240,68 @@
                 <p class="top-text">5 sessions</p>
                 <p class="top-text">2h 30min</p>
               </div>
-              <h1 class="course-name">TRIGONOMETRY & INTEGRAL</h1>
+              <h1 class="course-name">Grade 9 Mathematic Reviews for Exam</h1>
               <div class="bottom-card">
                 <div class="teacher">
                   <img
                     class="teacher-img"
-                    src="../assets/teacher1.png"
+                    src="../assets/teacher9.png"
                     alt=""
                   />
-                  <p class="teacher-name">Mr. Smith</p>
+                  <p class="teacher-name">Ms. Camilla Blossom</p>
                 </div>
-                <img class="love-black" src="../assets/love.png" alt="" />
+                <img
+                  class="love-black"
+                  src="../assets/love.png"
+                  alt=""
+                  onclick="toggleFav(this)"
+                />
               </div>
             </div>
           </div>
 
           <div class="video-card" data-level="senior">
             <div class="image-container">
-              <img class="course-img" src="../assets/course1.jpg" alt="" />
+              <img class="course-img" src="../assets/course4.jpeg" alt="" />
               <div class="overlay">
                 <img
-                  class="play-button error-trigger"
+                  class="play-button"
+                  src="../assets/play-button.png"
+                  alt="Play"
+                />
+              </div>
+            </div>
+            <div class="video-text">
+              <div class="top-card">
+                <p class="top-text">10 sessions</p>
+                <p class="top-text">8h 45min</p>
+              </div>
+              <h1 class="course-name">Grade 10 Fundamental of Physics</h1>
+              <div class="bottom-card">
+                <div class="teacher">
+                  <img
+                    class="teacher-img"
+                    src="../assets/teacher4.png"
+                    alt=""
+                  />
+                  <p class="teacher-name">Mr. Hariyanto</p>
+                </div>
+                <img
+                  class="love-black"
+                  src="../assets/love.png"
+                  alt=""
+                  onclick="toggleFav(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card" data-level="senior">
+            <div class="image-container">
+              <img class="course-img" src="../assets/course2.jpeg" alt="" />
+              <div class="overlay">
+                <img
+                  class="play-button"
                   src="../assets/play-button.png"
                   alt="Play"
                 />
@@ -395,9 +310,9 @@
             <div class="video-text">
               <div class="top-card">
                 <p class="top-text">5 sessions</p>
-                <p class="top-text">2h 30min</p>
+                <p class="top-text">41 min 43 sec</p>
               </div>
-              <h1 class="course-name">TRIGONOMETRY & INTEGRAL</h1>
+              <h1 class="course-name">Grade 11 Equations and Quadratic Formula</h1>
               <div class="bottom-card">
                 <div class="teacher">
                   <img
@@ -407,22 +322,160 @@
                   />
                   <p class="teacher-name">Mr. Smith</p>
                 </div>
-                <img class="love-black" src="../assets/love.png" alt="" />
+                <img
+                  class="love-black"
+                  src="../assets/love.png"
+                  alt=""
+                  onclick="toggleFav(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card" data-level="senior">
+            <div class="image-container">
+              <img class="course-img" src="../assets/course6.jpeg" alt="" />
+              <div class="overlay">
+                <img
+                  class="play-button"
+                  src="../assets/play-button.png"
+                  alt="Play"
+                />
+              </div>
+            </div>
+            <div class="video-text">
+              <div class="top-card">
+                <p class="top-text">8 sessions</p>
+                <p class="top-text">2h 30min</p>
+              </div>
+              <h1 class="course-name">Grade 12 Trigonometry & Integral</h1>
+              <div class="bottom-card">
+                <div class="teacher">
+                  <img
+                    class="teacher-img"
+                    src="../assets/teacher2.png"
+                    alt=""
+                  />
+                  <p class="teacher-name">Ms. Angellie Tan</p>
+                </div>
+                <img
+                  class="love-black"
+                  src="../assets/love.png"
+                  alt=""
+                  onclick="toggleFav(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card" data-level="senior">
+            <div class="image-container">
+              <img class="course-img" src="../assets/course3.jpeg" alt="" />
+              <div class="overlay">
+                <img
+                  class="play-button"
+                  src="../assets/play-button.png"
+                  alt="Play"
+                />
+              </div>
+            </div>
+            <div class="video-text">
+              <div class="top-card">
+                <p class="top-text">17 sessions</p>
+                <p class="top-text">11h 30min</p>
+              </div>
+              <h1 class="course-name">Grade 12 Chemical Compounds and Hidrocarbon</h1>
+              <div class="bottom-card">
+                <div class="teacher">
+                  <img
+                    class="teacher-img"
+                    src="../assets/teacher3.png"
+                    alt=""
+                  />
+                  <p class="teacher-name">Mr. Rolli Sebastian</p>
+                </div>
+                <img
+                  class="love-black"
+                  src="../assets/love.png"
+                  alt=""
+                  onclick="toggleFav(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card" data-level="senior">
+            <div class="image-container">
+              <img class="course-img" src="../assets/course5.jpeg" alt="" />
+              <div class="overlay">
+                <img
+                  class="play-button"
+                  src="../assets/play-button.png"
+                  alt="Play"
+                />
+              </div>
+            </div>
+            <div class="video-text">
+              <div class="top-card">
+                <p class="top-text">20 sessions</p>
+                <p class="top-text">21h 30min</p>
+              </div>
+              <h1 class="course-name">Grade 12 Human Anatomy and Physiology</h1>
+              <div class="bottom-card">
+                <div class="teacher">
+                  <img
+                    class="teacher-img"
+                    src="../assets/teacher5.png"
+                    alt=""
+                  />
+                  <p class="teacher-name">Mr. Chris Hemsworth</p>
+                </div>
+                <img
+                  class="love-black"
+                  src="../assets/love.png"
+                  alt=""
+                  onclick="toggleFav(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card" data-level="senior">
+            <div class="image-container">
+              <img class="course-img" src="../assets/course3.jpeg" alt="" />
+              <div class="overlay">
+                <img
+                  class="play-button"
+                  src="../assets/play-button.png"
+                  alt="Play"
+                />
+              </div>
+            </div>
+            <div class="video-text">
+              <div class="top-card">
+                <p class="top-text">15 sessions</p>
+                <p class="top-text">9h 55min</p>
+              </div>
+              <h1 class="course-name">Grade 12 Waves and Oscillations </h1>
+              <div class="bottom-card">
+                <div class="teacher">
+                  <img
+                    class="teacher-img"
+                    src="../assets/teacher6.png"
+                    alt=""
+                  />
+                  <p class="teacher-name">Ms. Aliana</p>
+                </div>
+                <img
+                  class="love-black"
+                  src="../assets/love.png"
+                  alt=""
+                  onclick="toggleFav(this)"
+                />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div id="errorModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>You have reached your free video access limit.</p>
-        <p>Please upgrade your subscription to continue.</p>
-        <a href="./subscription.html" class="upgrade-button"
-          >Upgrade Subscription</a
-        >
       </div>
     </div>
 

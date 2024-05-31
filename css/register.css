@@ -274,10 +274,10 @@ body {
 
 .isi::before,
 .isi::after {
-  content: "";
+  content: '';
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(331deg, hsl(210, 100%, 87%) 25.5%, #66b4ff 90.3%);
+  background: linear-gradient(331deg, hsl(210, 100%, 87%) 25.5%, #66B4FF 90.3%);
   z-index: -1;
   animation: moveCircle 10s linear infinite;
 }
@@ -298,19 +298,19 @@ body {
 
 @keyframes moveCircle {
   0% {
-    transform: translate(0, 0);
+      transform: translate(0, 0);
   }
   25% {
-    transform: translate(60px, 20px);
+      transform: translate(60px, 20px);
   }
   50% {
-    transform: translate(0, -40px);
+      transform: translate(0, -40px);
   }
   75% {
-    transform: translate(-60px, 20px);
+      transform: translate(-60px, 20px);
   }
   100% {
-    transform: translate(0, 0);
+      transform: translate(0, 0);
   }
 }
 
@@ -318,7 +318,7 @@ body {
   position: relative;
   border-radius: 3vw;
   padding: 50px;
-  margin: 12.5vw 6vw 6.5vw 6vw;
+  margin: 12vw 6vw 6.5vw 6vw;
   background-color: #ffffff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -337,7 +337,7 @@ body {
   height: 3px;
   width: 105px;
   border-radius: 8px;
-  background-color: #0055c9;
+  background-color: #0055C9;
 }
 
 #form {
@@ -365,51 +365,21 @@ body {
   font-weight: 500;
 }
 
-#username:focus {
-  box-shadow: 0 0 10px rgba(0, 73, 168, 0.35);
-  border: 1px solid #0049a8;
-  outline: none;
-}
-
-#date:focus {
-  box-shadow: 0 0 10px rgba(0, 73, 168, 0.35);
-  border: 1px solid #0049a8;
-  outline: none;
-}
-
-#email:focus {
-  box-shadow: 0 0 10px rgba(0, 73, 168, 0.35);
-  border: 1px solid #0049a8;
-  outline: none;
-}
-
-#password:focus {
-  box-shadow: 0 0 10px rgba(0, 73, 168, 0.35);
-  border: 1px solid #0049a8;
-  outline: none;
-}
-
-#confirmpassword:focus {
-  box-shadow: 0 0 10px rgba(0, 73, 168, 0.35);
-  border: 1px solid #0049a8;
-  outline: none;
-}
-
 .input-field input {
   outline: none;
   font-size: 14px;
   font-weight: 400;
   border-radius: 2vw;
-  border: 1px solid #0055c9;
+  border: 1px solid #0055C9;
   padding: 0 20px;
   height: 42px;
   margin: 8px 0;
   background-color: #ffffff;
-  color: #001f4a;
+  color: #001F4A;
 }
 
 input::placeholder {
-  color: #001f4a;
+  color: #001F4A;
 }
 
 .input-field div {
@@ -418,10 +388,16 @@ input::placeholder {
   gap: 10px;
 }
 
+.checkbox-section{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 20px;
+}
+
 .checkbox-field {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .checkbox-field label {
@@ -453,10 +429,7 @@ input::placeholder {
 .btn button {
   padding: 0.8vw 0;
   border-radius: 30vw;
-  background: var(
-    --gradient1,
-    linear-gradient(90deg, #66b4ff 0%, #0055c9 100%)
-  );
+  background: var(--gradient1, linear-gradient(90deg, #66B4FF 0%, #0055C9 100%));
   color: #ffffff;
   border: none;
   font-size: 17px;
@@ -469,14 +442,14 @@ input::placeholder {
 }
 
 .btn button:hover {
-  transform: scale(0.9);
+  transform: scale(0.9); 
 }
 
 .btnn button {
   padding: 0.8vw 0;
   border-radius: 30vw;
-  background: linear-gradient(90deg, #deefff 0%, #b0d8ff 120%);
-  color: #0049a8;
+  background: linear-gradient(90deg, #DEEFFF 0%, #B0D8FF 120%);
+  color: #0049A8;
   border: none;
   font-size: 17px;
   line-height: 20px;
@@ -488,25 +461,32 @@ input::placeholder {
 }
 
 .btnn button:hover {
-  transform: scale(0.9);
+  transform: scale(0.9); 
 }
 
-#error {
+#error{
   margin-top: 20px;
   color: red;
 }
 
 @media (max-width: 1200px) {
   .input-field {
-    width: calc(50% - 20px);
+      width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 768px) {
   .input-field {
-    width: 100%;
+      width: 100%;
   }
 }
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
 
 /* ================================ FOOTER ================================= */
 

@@ -219,7 +219,6 @@ body {
       left: 0;
       width: 100%;
       height: 0rem;
-      /* backdrop-filter: blur(50px); */
       background-color: #001F4A;
       overflow: hidden;
       transition: .3s ease;
@@ -299,7 +298,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #deefff ;
   background: linear-gradient(117deg, #fff 0%, #deefff 70.61%);
   padding-top: 9vw;
   padding-bottom: 6vw;
@@ -438,7 +436,6 @@ body {
   transform: translateY(-15px);
 }
 
-/* Price section styling */
 .price-section {
   display: flex;
   justify-content: center;
@@ -476,7 +473,6 @@ body {
   font-weight: 600;
 }
 
-/* Package name styling */
 .package-name {
   width: 100%;
   height: 2px;
@@ -497,7 +493,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* Features list styling */
 .features {
   flex-grow: 1;
 }
@@ -622,7 +617,6 @@ body {
 }
 
 .free button{
-  background: #deefff ;
   color: #0049A8 ;
 }
 
@@ -639,7 +633,6 @@ body {
 }
 
 .achiever {
-  background: #0049a8;
   background: linear-gradient(
     25deg,
     #47a6ff 1.5%,
@@ -658,12 +651,10 @@ body {
 }
 
 .achiever .inner-area {
-  /* border: none; */
   background: #0049a8;
 }
 
 .achiever .price-area {
-  /* padding: 0; */
   background: #66b4ff;
 }
 

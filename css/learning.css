@@ -1,7 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   height: 100vh;
   width: 100vw;
-  margin: 0;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
   background-color: #ffffff;
@@ -207,6 +219,7 @@ h3 {
 
 .learning-objectives h3 {
   font-size: 20px;
+  margin-bottom: 15px;
 }
 
 .learning-objectives p {
@@ -287,8 +300,9 @@ h3 {
 
 .video-title {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
+  margin-bottom: 20px;
   line-height: 25px;
   color: #001f4a;
   cursor: pointer;
@@ -384,8 +398,8 @@ video {
 .comment {
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  margin-bottom: 30px;
+  gap: 15px;
+  margin-bottom: 25px;
   padding: 30px;
   border-radius: 1vw;
   background-color: #ffffff;
@@ -409,6 +423,14 @@ video {
   align-items: center;
 }
 
+#teacher-profile{
+  margin-bottom: 15px;
+}
+
+p{
+  font-size: 14px;
+}
+
 .reply-section {
   display: flex;
   flex-direction: row;
@@ -422,7 +444,7 @@ video {
   border: 1px solid #66b4ff;
   border-radius: 3vw;
   width: 75%;
-  font-size: 16px;
+  font-size: 14px;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -504,6 +526,7 @@ video {
   }
   .video-title{
     width: 50%;
+    margin: 0;
   }
   .exercise-button{
     top: 0;
@@ -523,7 +546,6 @@ video {
   }
 }
 
-
 /*========================================= QUIZ/EXERCICES ======================================*/
 
 .question-section {
@@ -535,13 +557,18 @@ video {
   padding: 35px 10px 35px 35px;
 }
 
+.question-section p{
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
 .watch-videos {
   display: flex;
   justify-content: flex-end;
 }
 
 .watch-button {
-  padding: 15px 25px;
+  padding: 13px 25px;
 }
 
 .watch-button:hover {
@@ -552,7 +579,7 @@ video {
   margin: 20px 0;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 60px;
 }
 
 .question {
@@ -571,6 +598,7 @@ video {
   border: none;
   padding: 20px;
   margin: 7px 0;
+  font-size: 16px;
   border-radius: 1vw;
   cursor: pointer;
   transition: background-color 0.5s, transform 0.3s;
@@ -600,6 +628,7 @@ video {
   border: none;
   padding: 12px 25px;
   margin-top: 15px;
+  font-size: 16px;
   border-radius: 3vw;
   cursor: pointer;
   transition: transform 0.3s;
@@ -621,21 +650,10 @@ video {
   display: none;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 #comment-input {
   flex: 1;
   padding: 12px 20px;
-  font-size: 16px;
+  font-size: 14px;
   border: 1px solid #66b4ff;
   border-radius: 3vw;
   width: 75%;
@@ -665,17 +683,6 @@ video {
 #send-button:hover {
   background-color: #0056b3;
   transform: scale(0.95);
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .back-button {

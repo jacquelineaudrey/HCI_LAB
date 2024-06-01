@@ -32,7 +32,7 @@ const setPrice = () => {
   });
 };
 
-// ========= SWITCH ========
+// ===================================== SWITCH =======================================
 
 const switchElement = document.querySelector(".switch");
 switchElement.addEventListener("click", () => {
@@ -52,11 +52,10 @@ switchElement.addEventListener("click", () => {
   setPrice();
 });
 
-// Initialize the switch with correct colors for labels
 const initSwitch = () => {
   const labels = switchElement.querySelectorAll('.switch-label');
-  labels[0].classList.add('active'); // Monthly
-  labels[1].classList.add('inactive'); // Yearly
+  labels[0].classList.add('active'); 
+  labels[1].classList.add('inactive'); 
 };
 
 initSwitch();

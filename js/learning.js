@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// CSS Animations
+/* CSS Animations */
 const style = document.createElement("style");
 style.innerHTML = `
   @keyframes correct-animation {

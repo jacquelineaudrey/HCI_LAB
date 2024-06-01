@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       button.classList.add("active");
 
       if (level !== "fav") {
-        currentLevel = level; // Update current level for non-fav buttons
+        currentLevel = level;
       }
 
       cards.forEach((card) => {
@@ -68,13 +68,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  document.getElementById("search-btn").addEventListener("click", performSearch);
+  document
+    .getElementById("search-btn")
+    .addEventListener("click", performSearch);
 
-  document.getElementById("search").addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      performSearch();
-    }
-  });
+  document
+    .getElementById("search")
+    .addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        performSearch();
+      }
+    });
 
   cards.forEach((card) => {
     card.addEventListener("click", function () {

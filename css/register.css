@@ -220,7 +220,6 @@ body {
       left: 0;
       width: 100%;
       height: 0rem;
-      /* backdrop-filter: blur(50px); */
       background-color: #001F4A;
       overflow: hidden;
       transition: .3s ease;

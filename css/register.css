@@ -20,12 +20,12 @@ body {
 
 /* ======================================== NAVBAR ========================================= */
 
-.header {
+.header{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.6vw 6vw;
+  padding: 1.6vw 6vw; 
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -37,23 +37,53 @@ body {
 .logo-wrapper {
   display: flex;
   align-items: center;
+  gap: 0.3vw;
 }
 
-#hero {
-  margin-right: 7px;
-  font-size: 2vw;
+#hero{
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px; 
+  font-size: 1.8vw;
+  line-height: 1.5vw;
   font-weight: 1000;
+  letter-spacing: 0.1px;
   text-decoration: none;
-  color: #001f4a;
+  color: #001F4A;
+  text-align: start;
+}
+
+.logo-bawah {
+  font-size: 1vw;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
 
 #hero:hover {
-  color: #0049a8;
+  color: #0049A8 ;
+  transition: color 0.2s ease-in-out;
+}
+
+#logoo{
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px; 
+  font-size: 1.8vw;
+  line-height: 1.5vw;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: start;
+}
+
+#logoo:hover {
+  color: #B0D8FF;
   transition: color 0.2s ease-in-out;
 }
 
 .logo-img img {
-  height: 2.2vw;
+  height: 2.7vw; 
 }
 
 #check {
@@ -71,50 +101,47 @@ body {
 }
 
 .navbar {
-  flex: 1;
+  flex: 1; 
   display: flex;
   justify-content: center;
   font-size: 1.3vw;
 }
 
 .navbar a {
-  position: relative;
-  color: #001f4a;
-  margin: 0 1.6vw;
+  position: relative; 
+  color: #001F4A;
+  margin: 0 1.6vw; 
   text-decoration: none;
-  opacity: 1;
+  opacity: 1; 
 }
 
 .navbar a:hover {
-  color: #0049a8;
+  color: #0049A8;
 }
 
 .navbar a::before {
-  content: "";
+  content: ''; 
   position: absolute;
-  bottom: -0.3vw;
-  left: 0;
-  width: 0;
-  height: 0.2vw;
-  background: linear-gradient(90deg, #66b4ff 0%, #0055c9 100%);
+  bottom: -0.3vw; 
+  left: 0; 
+  width: 0; 
+  height: 0.2vw; 
+  background: linear-gradient(90deg,  #66B4FF 0%, #0055C9 100%);
   transition: width 0.7s ease;
 }
 
 .navbar a:hover::before {
-  width: 100%;
+  width: 100%; 
 }
 
-.button-wrapper {
+.button-wrapper{
   display: inline-block;
 }
 
 .button1 {
   padding: 0.8vw 2vw;
   border-radius: 30vw;
-  background: var(
-    --gradient1,
-    linear-gradient(90deg, #66b4ff 0%, #0055c9 100%)
-  );
+  background: var(--gradient1, linear-gradient(90deg, #66B4FF 0%, #0055C9 100%));
   color: #ffffff;
   border: none;
   text-decoration: none;
@@ -125,139 +152,145 @@ body {
 }
 
 .button1:hover {
-  transform: scale(0.9);
+  transform: scale(0.9); 
 }
 
 @media screen and (max-width: 1200px) {
-  .header {
-    padding: 1.6vw 6%;
+  .header{
+      padding: 1.6vw 6%;
   }
-  #hero {
-    font-size: 1.9vw;
+  .logo-wrapper{
+      gap: 0vw;
   }
-  .logo-img img {
-    height: 2.1vw;
+  .button1{
+      padding: 0.8vw 2.1vw;
+      font-size: 1.3vw;
   }
-  .button1 {
-    padding: 0.8vw 2.1vw;
-    font-size: 1.3vw;
-  }
-  .navbar a {
-    font-size: 1.3vw;
+  .navbar a{
+      font-size: 1.3vw;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
   .header {
-    padding: 1.1rem 2rem;
+      padding: 1.1rem 2rem; 
+  }
+  #hero{
+      font-size: 2.5vw;
+      line-height: 2vw;
+  }
+  .logo-bawah{
+      font-size: 1.3vw;
+  }
+  .logo-img img{
+      width: 3.5vw;
+      height: auto;
   }
   .icons {
-    top: 25%;
-    right: 7%;
-    display: block;
-    height: 5vw;
-    width: 5vw;
+      top: 25%;
+      right: 7%;
+      display: block;
+      height: 5vw;
+      width: 5vw;
   }
 
-  #check:checked ~ .icons #menu-icon {
-    display: none;
+  #menu-icon{
+      width: 5vw;
+    }
+
+  #check:checked~.icons #menu-icon {
+      display: none;
   }
 
   .icons #close-icon {
-    display: none;
+      display: none;
   }
 
-  #check:checked ~ .icons #close-icon {
-    display: block;
-    position: absolute;
-    width: 1.6rem;
-    height: auto;
-    right: 8%;
-    top: 18%;
-  }
-
-  #hero {
-    font-size: 3.2vw;
-    margin-right: 1.2vw;
-  }
-  .logo-img img {
-    position: absolute;
-    top: 35%;
-    height: 3.2vw;
+  #check:checked~.icons #close-icon {
+      display: block;
+      position: absolute;
+      width: 1.6rem;
+      height: auto;
+      right: 8%;
+      top: 18%;
   }
   .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 0rem;
-    /* backdrop-filter: blur(50px); */
-    background-color: #001f4a;
-    overflow: hidden;
-    transition: 0.3s ease;
-    flex-direction: column;
-    align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 0rem;
+      /* backdrop-filter: blur(50px); */
+      background-color: #001F4A;
+      overflow: hidden;
+      transition: .3s ease;
+      flex-direction: column; 
+      align-items: center;
   }
-  .navbar a:hover {
-    color: #b0d8ff;
-    font-weight: 600;
+  .navbar a:hover{
+      color: #B0D8FF;
+      font-weight: 600;
   }
   .navbar a:hover::before {
-    width: 0%;
+      width: 0%; 
   }
-  #check:checked ~ .navbar {
-    height: 14rem;
+  #check:checked~.navbar {
+      height: 14rem;
   }
-  .navbar a {
-    font-size: 0.9rem;
-    color: #ffffff;
-    margin: 10px 0;
+  .navbar a{
+      font-size: 0.9rem;
+      color: #ffffff;
+      margin: 10px 0;
   }
 
-  .button-wrapper {
-    position: absolute;
-    right: 15%;
+  .button-wrapper{
+      position: absolute;
+      right: 15%;
   }
-  .button1 {
-    padding: 0.6rem 1.5rem;
-    font-size: 2vw;
+  .button1{
+      padding: 0.6rem 1.5rem;
+      font-size: 2vw;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px){
   .header {
-    padding: 0.7rem 2rem;
+      padding: 0.7rem 2rem; 
   }
-  .button-wrapper {
-    position: absolute;
-    right: 16%;
+  #hero{
+      font-size: 3vw;
+      line-height: 2.3vw;
   }
-  .button1 {
-    padding: 0.35rem 0.9rem;
-    font-size: 2.5vw;
+  .logo-bawah{
+      font-size: 1.5vw;
+  }
+  .logo-img img{
+      width: 4vw;
+      height: auto;
+  }
+  .button-wrapper{
+      position: absolute;
+      right: 16%;
+  }
+  .button1{
+      padding: 0.35rem 0.9rem;
+      font-size: 2.5vw;
   }
   .icons {
-    position: absolute;
-    top: 27%;
-    right: 7%;
-    display: block;
-    width: 5.5vw;
-    height: auto;
+      position: absolute;
+      top: 27%;
+      right: 7%;
+      display: block;
+      width: 5.5vw;
+      height: auto;
   }
-  #check:checked ~ .icons #close-icon {
-    display: block;
-    position: absolute;
-    width: 1.1rem;
-    height: auto;
-    right: 7%;
-    top: 22%;
-  }
-
-  #hero {
-    font-size: 4vw;
-  }
-  .logo-img img {
-    height: 4vw;
+  #check:checked~.icons #close-icon {
+      display: block;
+      position: absolute;
+      width: 1.1rem;
+      height: auto;
+      right: 7%;
+      top: 22%;
   }
 }
 
@@ -388,6 +421,13 @@ input::placeholder {
   gap: 10px;
 }
 
+.input-field input:focus,
+.input-field input:active {
+  border-color: hsl(211, 100%, 50%);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+
 .checkbox-section{
   display: flex;
   flex-direction: column;
@@ -487,7 +527,6 @@ input::placeholder {
   margin-top: 5px;
 }
 
-
 /* ================================ FOOTER ================================= */
 
 .footer {
@@ -510,6 +549,16 @@ input::placeholder {
   flex-direction: row;
   gap: 10vw;
 }
+.section-button {
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+  gap: 1.7vw;
+}
+
+.jenius-bawah {
+  line-height: 1.9vw;
+}
 
 .footerTigaBox {
   display: flex;
@@ -527,22 +576,6 @@ input::placeholder {
 
 .footerIsiTiga {
   margin-bottom: -0.5vw;
-}
-
-.title {
-  display: flex;
-  flex-direction: row;
-  gap: 0.8vw;
-}
-
-.title h4 {
-  font-size: 1.7vw;
-  font-weight: 500;
-}
-
-.title img {
-  width: 2.2vw;
-  height: 2.2vw;
 }
 
 .contact-footer {
@@ -574,43 +607,23 @@ input::placeholder {
 }
 
 .footer-button {
-  width: 50%;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 2vw;
-  justify-content: flex-start;
-  gap: 1.7vw;
-}
-
-.footer-bs p {
-  font-size: 1.2vw;
-  color: #7790b2;
-}
-
-.footer_button {
-  display: flex;
+  width: 4vw;
+  height: 4vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8px;
   flex-shrink: 0;
   border-radius: 30vw;
   background: #66b4ff;
-  width: 4vw;
-  height: 4vw;
 }
 
-.footer_button img {
+.footer-button img {
   width: 50%;
 }
 
-.footer_button:hover img {
+.footer-button:hover img {
   animation: bounce-skills 0.6s;
-}
-
-#facebook {
-  width: 1.3vw;
 }
 
 @keyframes bounce-skills {
@@ -631,14 +644,29 @@ input::placeholder {
   }
 }
 
+.footer-bs p {
+  font-size: 1.2vw;
+  color: #7790b2;
+}
+
+#footer_button {
+  width: 4vw;
+  height: 4vw;
+}
+
+#facebook {
+  width: 1.3vw;
+}
+
+.title {
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+}
+
 @media screen and (max-width: 1200px) {
   .footerTigaBox p {
     font-size: 1.4vw;
     line-height: 2.2vw;
-  }
-  .title h4 {
-    font-size: 1.9vw;
-    font-weight: 600;
   }
   .footer-bs p {
     font-size: 1.4vw;
@@ -652,6 +680,10 @@ input::placeholder {
 @media screen and (max-width: 768px) {
   .footer {
     padding: 1vw 2vw 0vw 1.5vw;
+  }
+  .jenius-bawah {
+    font-size: 2.5vw;
+    margin-bottom: 0.4vw;
   }
   .bagiDuaFooter {
     padding: 4.5vw 6vw 4vw 6vw;
@@ -667,16 +699,12 @@ input::placeholder {
     font-size: 1.8vw;
     line-height: 2.7vw;
   }
-  .title h4 {
-    font-size: 2.3vw;
-    font-weight: 600;
-  }
-  .title img {
-    width: 3vw;
-    height: 3vw;
-  }
   .footer-bs p {
     font-size: 1.6vw;
+  }
+  .footer-button {
+    width: 5.8vw;
+    height: 5.8vw;
   }
   #footer_button {
     width: 5.5vw;
@@ -687,5 +715,18 @@ input::placeholder {
     padding: 1vw 1.3vw;
     font-size: 2vw;
     width: 15.5vw;
+  }
+  .title {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .jenius-bawah {
+    font-size: 3vw;
+    margin-bottom: 1vw;
+  }
+  .title {
+    font-size: 3vw;
   }
 }

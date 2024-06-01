@@ -80,10 +80,10 @@ document.addEventListener("DOMContentLoaded", function () {
     card.addEventListener("click", function () {
       const level = card.getAttribute("data-level");
 
-      if (level === "elementary" || level === "senior") {
+      if (level === "senior") {
         modal.style.display = "none";
         window.location.href = "learning.html";
-      } else if (level === "junior") {
+      } else if (level === "junior" || level === "elementary") {
         modal.style.display = "block";
       }
     });

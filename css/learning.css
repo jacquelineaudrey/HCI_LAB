@@ -279,18 +279,17 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   margin: 40px;
-}
-
-@media screen and (max-width: 1376px) {
-  .course-title {
-    margin: 30px 30px;
-  }
+  margin-right: 10px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  align-items: center;
 }
 
 .video-title {
   font-size: 20px;
-  line-height: 7px;
   font-weight: 600;
+  margin: 0;
+  line-height: 25px;
   color: #001f4a;
   cursor: pointer;
 }
@@ -353,9 +352,9 @@ video {
 .watch-button {
   font-size: 16px;
   position: relative;
-  /* top: 30px; */
+  top: -10px;
   right: 30px;
-  padding: 10px 25px;
+  padding: 15px 30px;
   background: var(
     --gradient1,
     linear-gradient(90deg, #66b4ff 0%, #0055c9 100%)
@@ -412,6 +411,8 @@ video {
 
 .reply-section {
   display: flex;
+  flex-direction: row;
+  gap: 15px;
   align-items: center;
 }
 
@@ -420,7 +421,7 @@ video {
   padding: 12px 20px;
   border: 1px solid #66b4ff;
   border-radius: 3vw;
-  margin-right: 15px;
+  width: 75%;
   font-size: 16px;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -451,6 +452,9 @@ video {
 }
 
 .input-section {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
   margin: 30px;
   border-radius: 5px;
   background-color: #f9f9f9;
@@ -466,6 +470,10 @@ video {
 .replies {
   margin: 20px;
   margin-bottom: 0;
+}
+
+.replies p {
+  line-height: 25px;
 }
 
 .replies .comment-profile img {
@@ -489,6 +497,32 @@ video {
 .teacher-name {
   color: #0056b3 !important;
 }
+
+@media screen and (max-width: 1200px) {
+  .course-title{
+    padding-bottom: 15px;
+  }
+  .video-title{
+    width: 50%;
+  }
+  .exercise-button{
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .course-title{
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center !important;
+    gap: 20px;
+  }
+  .exercise-button{
+    position: inherit;
+  }
+}
+
 
 /*========================================= QUIZ/EXERCICES ======================================*/
 
@@ -604,7 +638,6 @@ video {
   font-size: 16px;
   border: 1px solid #66b4ff;
   border-radius: 3vw;
-  margin-right: 10px;
   width: 75%;
   transition: border-color 0.3s, box-shadow 0.3s;
 }

@@ -11,10 +11,13 @@
     <!-- NAVBAR  -->
     <navbar class="header">
       <div class="logo-wrapper">
-        <a href="./home.html" id="hero">Jensdemy</a>
+        <a href="./home.html" id="hero">
+          <span>Jenius</span>
+          <span class="logo-bawah">Academy</span>
+        </a>
         <div class="logo-img">
           <a href="./home.html"
-            ><img src="../assets/logo.png" alt="Jensdemy Logo"
+            ><img src="../assets/logo.png" alt="Jenius Academy Logo"
           /></a>
         </div>
       </div>
@@ -41,11 +44,15 @@
       <div id="modal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <p>
-            You have reached your free video limit. Please upgrade your
-            subscription to continue.
-          </p>
-          <button id="upgrade-button">Upgrade Subscription</button>
+          <div class="isi-error">
+            <img class="error-img" src="../assets/error-logo.png" alt="" />
+            <h1 class="oops">Ooops</h1>
+            <p>
+              You have reached your free video limit. Please upgrade your
+              subscription to continue.
+            </p>
+            <button id="upgrade-button">Upgrade Subscription</button>
+          </div>
         </div>
       </div>
 
@@ -57,18 +64,24 @@
           </div>
         </header>
         <div class="button-selection">
-          <button class="btn-level" id="fav-btn" data-level="fav">
-            Favorite
-          </button>
-          <button class="btn-level" id="elementary-btn" data-level="elementary">
-            Elementary
-          </button>
-          <button class="btn-level" id="junior-btn" data-level="junior">
-            Junior
-          </button>
-          <button class="btn-level" id="senior-btn" data-level="senior">
-            Senior
-          </button>
+          <div class="button-option">
+            <button class="btn-level" id="fav-btn" data-level="fav">
+              Favorite
+            </button>
+            <button
+              class="btn-level"
+              id="elementary-btn"
+              data-level="elementary"
+            >
+              Elementary
+            </button>
+            <button class="btn-level" id="junior-btn" data-level="junior">
+              Junior
+            </button>
+            <button class="btn-level" id="senior-btn" data-level="senior">
+              Senior
+            </button>
+          </div>
           <div class="search-field">
             <input type="text" id="search" placeholder="Search course name" />
             <div class="search-img">
@@ -312,7 +325,9 @@
                 <p class="top-text">5 sessions</p>
                 <p class="top-text">41 min 43 sec</p>
               </div>
-              <h1 class="course-name">Grade 11 Equations and Quadratic Formula</h1>
+              <h1 class="course-name">
+                Grade 11 Equations and Quadratic Formula
+              </h1>
               <div class="bottom-card">
                 <div class="teacher">
                   <img
@@ -334,7 +349,7 @@
 
           <div class="video-card" data-level="senior">
             <div class="image-container">
-              <img class="course-img" src="../assets/course6.jpeg" alt="" />
+              <img class="course-img" src="../assets/course1.jpg" alt="" />
               <div class="overlay">
                 <img
                   class="play-button"
@@ -384,7 +399,9 @@
                 <p class="top-text">17 sessions</p>
                 <p class="top-text">11h 30min</p>
               </div>
-              <h1 class="course-name">Grade 12 Chemical Compounds and Hidrocarbon</h1>
+              <h1 class="course-name">
+                Grade 12 Chemical Compounds and Hidrocarbon
+              </h1>
               <div class="bottom-card">
                 <div class="teacher">
                   <img
@@ -442,7 +459,7 @@
 
           <div class="video-card" data-level="senior">
             <div class="image-container">
-              <img class="course-img" src="../assets/course3.jpeg" alt="" />
+              <img class="course-img" src="../assets/course6.jpeg" alt="" />
               <div class="overlay">
                 <img
                   class="play-button"
@@ -456,7 +473,7 @@
                 <p class="top-text">15 sessions</p>
                 <p class="top-text">9h 55min</p>
               </div>
-              <h1 class="course-name">Grade 12 Waves and Oscillations </h1>
+              <h1 class="course-name">Grade 12 Waves and Oscillations</h1>
               <div class="bottom-card">
                 <div class="teacher">
                   <img
@@ -485,12 +502,19 @@
         <div class="footerIsiTiga">
           <div class="footerTigaAtas">
             <div class="footerTigaBox">
-              <div class="title">
-                <h4>Jensdemy</h4>
-                <img src="../assets/logo.png" alt="" />
+              <div class="logo-wrapper">
+                <a href="./home.html" id="logoo">
+                  <span class="jenius-bawah">Jenius</span>
+                  <span class="logo-bawah">Academy</span>
+                </a>
+                <div class="logo-img">
+                  <a href="./home.html"
+                    ><img src="../assets/logo.png" alt="Jenius Academy Logo"
+                  /></a>
+                </div>
               </div>
               <p>
-                Jensdemy is an online learning platform that empowers success
+                Jenius Academy is an online learning platform that empowers success
                 from elementary to college.
               </p>
             </div>
@@ -499,7 +523,7 @@
                 <h4>Contact</h4>
               </div>
               <div class="contact-footer">
-                <p>johndoe@jensdemy.com</p>
+                <p>johndoe@JeniusAcademy.com</p>
                 <p>Cemara Hijau, D1234, West Jakarta, Indonesia</p>
                 <p>+62 822 7618 2818</p>
               </div>
@@ -509,7 +533,7 @@
                 <h4>Subscribe</h4>
               </div>
               <p>
-                Subscribe to Jensdemy to access our exclusive features and
+                Subscribe to Jenius Academy to access our exclusive features and
                 courses.
               </p>
               <a href="./register.html" class="button1" id="footer-btn"
@@ -520,14 +544,14 @@
         </div>
 
         <div class="footer-bs">
-          <div class="footer-button">
-            <a href="#" target="_blank" class="footer_button"
+          <div class="section-button" id="footer-button">
+            <a href="#" target="_blank" class="footer-button"
               ><img id="facebook" src="../assets/facebook.png" alt=""
             /></a>
-            <a href="#" target="_blank" class="footer_button"
+            <a href="#" target="_blank" class="footer-button"
               ><img src="../assets/twitter.png" alt=""
             /></a>
-            <a href="#" target="_blank" class="footer_button"
+            <a href="#" target="_blank" class="footer-button"
               ><img src="../assets/instagram.png" alt=""
             /></a>
           </div>

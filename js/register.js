@@ -3,6 +3,24 @@ document.getElementById("form").addEventListener("submit", function (event) {
 
   let validation = true;
 
+  const firstname = document.getElementById("firstname").value;
+  const firstnameError = document.getElementById("firstname-error");
+  if (firstname === "") {
+    firstnameError.textContent = "First name is required";
+    validation = false;
+  } else {
+    firstnameError.textContent = "";
+  }
+
+  const surname = document.getElementById("surname").value;
+  const surnameError = document.getElementById("surname-error");
+  if (surname === "") {
+    surnameError.textContent = "Surname is required";
+    validation = false;
+  } else {
+    surnameError.textContent = "";
+  }
+
   const username = document.getElementById("username").value;
   const usernameError = document.getElementById("username-error");
   if (username === "") {
@@ -90,6 +108,10 @@ document.getElementById("form").addEventListener("submit", function (event) {
 
 document.getElementById("form").addEventListener("reset", function (event) {
   if (confirm("Are you sure you want to reset the form?")) {
+    document.getElementById("firstname-error").textContent =
+      "First name is required";
+    document.getElementById("surname-error").textContent =
+      "Surname is required";
     document.getElementById("username-error").textContent =
       "Username is required";
     document.getElementById("date-error").textContent =
@@ -103,8 +125,19 @@ document.getElementById("form").addEventListener("reset", function (event) {
       "Confirm Password is required";
     document.getElementById("agree-error").textContent =
       "You must agree to the terms and conditions";
+
+    document.querySelectorAll(".show-password").forEach((button) => {
+      const input = button.previousElementSibling;
+      const eyeCloseImg = button.querySelector(".eye-close");
+      const eyeOpenImg = button.querySelector(".eye-open");
+
+      input.type = "password";
+      eyeCloseImg.style.display = "inline";
+      eyeOpenImg.style.display = "none";
+    });
+
   } else {
-    event.preventDefault(); 
+    event.preventDefault();
   }
 });
 
@@ -162,3 +195,24 @@ function validatePassword(password) {
     return false;
   }
 }
+
+/* ===================================== SHOW PASSWORD =======================*/
+
+document.querySelectorAll('.show-password').forEach(button => {
+  const input = button.previousElementSibling;
+  const eyeCloseImg = button.querySelector('.eye-close');
+  const eyeOpenImg = button.querySelector('.eye-open');
+
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (input.type === 'password') {
+      input.type = 'text';
+      eyeCloseImg.style.display = 'none';
+      eyeOpenImg.style.display = 'inline';
+    } else {
+      input.type = 'password';
+      eyeCloseImg.style.display = 'inline';
+      eyeOpenImg.style.display = 'none';
+    }
+  });
+});

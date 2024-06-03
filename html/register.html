@@ -49,6 +49,28 @@
           <form id="form">
             <div class="fields">
               <div class="input-field">
+                <label for="firstname">First Name :</label>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  placeholder="Enter first name"
+                />
+                <div class="error-message" id="firstname-error"></div>
+              </div>
+
+              <div class="input-field">
+                <label for="surname">Surname :</label>
+                <input
+                  type="text"
+                  name="surname"
+                  id="surname"
+                  placeholder="Enter surname"
+                />
+                <div class="error-message" id="surname-error"></div>
+              </div>
+
+              <div class="input-field">
                 <label for="username">Username :</label>
                 <input
                   type="text"
@@ -76,6 +98,14 @@
                 <div class="error-message" id="phonenumber-error"></div>
               </div>
 
+              <!-- <div class="input-field">
+                <label for="gender">Gender : </label>
+                <input type="radio" name="gender" id="male" />
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" />
+                <label for="female">Female</label>
+              </div> -->
+
               <div class="input-field">
                 <label for="email">Email :</label>
                 <input
@@ -89,23 +119,35 @@
 
               <div class="input-field">
                 <label for="password">Password :</label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Enter password"
-                />
+                <div class="input-wrapper">
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Enter password"
+                  />
+                  <button class="show-password">
+                    <img class="eye-close" src="../assets/eye-close.png" alt="Close Eye">
+                    <img class="eye-open" src="../assets/eye-open.png" alt="Open Eye" style="display: none;">
+                  </button>
+                </div>
                 <div class="error-message" id="password-error"></div>
               </div>
 
               <div class="input-field">
                 <label for="confirmpassword">Confirm Password :</label>
-                <input
-                  type="password"
-                  name="confirmpassword"
-                  id="confirmpassword"
-                  placeholder="Enter password"
-                />
+                <div class="input-wrapper">
+                  <input
+                    type="password"
+                    name="confirmpassword"
+                    id="confirmpassword"
+                    placeholder="Enter password"
+                  />
+                  <button class="show-password">
+                    <img class="eye-close" src="../assets/eye-close.png" alt="Close Eye">
+                    <img class="eye-open" src="../assets/eye-open.png" alt="Open Eye" style="display: none;">
+                  </button>
+                </div>
                 <div class="error-message" id="confirmpassword-error"></div>
               </div>
             </div>
@@ -150,8 +192,8 @@
                 </div>
               </div>
               <p>
-                Jenius Academy is an online learning platform that empowers success
-                from elementary to college.
+                Jenius Academy is an online learning platform that empowers
+                success from elementary to college.
               </p>
             </div>
             <div class="footerTigaBox">
@@ -181,13 +223,19 @@
 
         <div class="footer-bs">
           <div class="section-button" id="footer-button">
-            <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwiegZ3BjrqGAxUxDIMDHeTAA8EYABAAGgJzZg&ase=2&gclid=CjwKCAjwjeuyBhBuEiwAJ3vuoUHIgUpbccsc8FN6512m8SQ5AiyL7tgptzCI4i1SP3MiG7NqL6AJgxoCRpwQAvD_BwE&sig=AOD64_3FPXrjlKilNVBF2eYJUAsiEwZd3Q&q&nis=4&adurl&ved=2ahUKEwjxu5fBjrqGAxXbzjgGHRW6APcQ0Qx6BAgGEAE" target="_blank" class="footer-button"
+            <a
+              href="https://www.google.com/aclk?sa=l&ai=DChcSEwiegZ3BjrqGAxUxDIMDHeTAA8EYABAAGgJzZg&ase=2&gclid=CjwKCAjwjeuyBhBuEiwAJ3vuoUHIgUpbccsc8FN6512m8SQ5AiyL7tgptzCI4i1SP3MiG7NqL6AJgxoCRpwQAvD_BwE&sig=AOD64_3FPXrjlKilNVBF2eYJUAsiEwZd3Q&q&nis=4&adurl&ved=2ahUKEwjxu5fBjrqGAxXbzjgGHRW6APcQ0Qx6BAgGEAE"
+              target="_blank"
+              class="footer-button"
               ><img id="facebook" src="../assets/facebook.png" alt=""
             /></a>
             <a href="https://x.com/" target="_blank" class="footer-button"
               ><img src="../assets/twitter.png" alt=""
             /></a>
-            <a href="https://www.instagram.com/jac_qx/" target="_blank" class="footer-button"
+            <a
+              href="https://www.instagram.com/jac_qx/"
+              target="_blank"
+              class="footer-button"
               ><img src="../assets/instagram.png" alt=""
             /></a>
           </div>

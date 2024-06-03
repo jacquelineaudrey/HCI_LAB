@@ -20,12 +20,12 @@ body {
 
 /* ======================================== NAVBAR ========================================= */
 
-.header{
+.header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.6vw 6vw; 
+  padding: 1.6vw 6vw;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -40,16 +40,16 @@ body {
   gap: 0.3vw;
 }
 
-#hero{
+#hero {
   display: flex;
   flex-direction: column;
-  margin-right: 10px; 
+  margin-right: 10px;
   font-size: 1.8vw;
   line-height: 1.5vw;
   font-weight: 1000;
   letter-spacing: 0.1px;
   text-decoration: none;
-  color: #001F4A;
+  color: #001f4a;
   text-align: start;
 }
 
@@ -60,14 +60,14 @@ body {
 }
 
 #hero:hover {
-  color: #0049A8 ;
+  color: #0049a8;
   transition: color 0.2s ease-in-out;
 }
 
-#logoo{
+#logoo {
   display: flex;
   flex-direction: column;
-  margin-right: 10px; 
+  margin-right: 10px;
   font-size: 1.8vw;
   line-height: 1.5vw;
   font-weight: 700;
@@ -78,12 +78,12 @@ body {
 }
 
 #logoo:hover {
-  color: #B0D8FF;
+  color: #b0d8ff;
   transition: color 0.2s ease-in-out;
 }
 
 .logo-img img {
-  height: 2.7vw; 
+  height: 2.7vw;
 }
 
 #check {
@@ -101,47 +101,50 @@ body {
 }
 
 .navbar {
-  flex: 1; 
+  flex: 1;
   display: flex;
   justify-content: center;
   font-size: 1.3vw;
 }
 
 .navbar a {
-  position: relative; 
-  color: #001F4A;
-  margin: 0 1.6vw; 
+  position: relative;
+  color: #001f4a;
+  margin: 0 1.6vw;
   text-decoration: none;
-  opacity: 1; 
+  opacity: 1;
 }
 
 .navbar a:hover {
-  color: #0049A8;
+  color: #0049a8;
 }
 
 .navbar a::before {
-  content: ''; 
+  content: "";
   position: absolute;
-  bottom: -0.3vw; 
-  left: 0; 
-  width: 0; 
-  height: 0.2vw; 
-  background: linear-gradient(90deg,  #66B4FF 0%, #0055C9 100%);
+  bottom: -0.3vw;
+  left: 0;
+  width: 0;
+  height: 0.2vw;
+  background: linear-gradient(90deg, #66b4ff 0%, #0055c9 100%);
   transition: width 0.7s ease;
 }
 
 .navbar a:hover::before {
-  width: 100%; 
+  width: 100%;
 }
 
-.button-wrapper{
+.button-wrapper {
   display: inline-block;
 }
 
 .button1 {
   padding: 0.8vw 2vw;
   border-radius: 30vw;
-  background: var(--gradient1, linear-gradient(90deg, #66B4FF 0%, #0055C9 100%));
+  background: var(
+    --gradient1,
+    linear-gradient(90deg, #66b4ff 0%, #0055c9 100%)
+  );
   color: #ffffff;
   border: none;
   text-decoration: none;
@@ -152,144 +155,144 @@ body {
 }
 
 .button1:hover {
-  transform: scale(0.9); 
+  transform: scale(0.9);
 }
 
 @media screen and (max-width: 1200px) {
-  .header{
-      padding: 1.6vw 6%;
+  .header {
+    padding: 1.6vw 6%;
   }
-  .logo-wrapper{
-      gap: 0vw;
+  .logo-wrapper {
+    gap: 0vw;
   }
-  .button1{
-      padding: 0.8vw 2.1vw;
-      font-size: 1.3vw;
+  .button1 {
+    padding: 0.8vw 2.1vw;
+    font-size: 1.3vw;
   }
-  .navbar a{
-      font-size: 1.3vw;
+  .navbar a {
+    font-size: 1.3vw;
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .header {
-      padding: 1.1rem 2rem; 
+    padding: 1.1rem 2rem;
   }
-  #hero{
-      font-size: 2.5vw;
-      line-height: 2vw;
+  #hero {
+    font-size: 2.5vw;
+    line-height: 2vw;
   }
-  .logo-bawah{
-      font-size: 1.3vw;
+  .logo-bawah {
+    font-size: 1.3vw;
   }
-  .logo-img img{
-      width: 3.5vw;
-      height: auto;
+  .logo-img img {
+    width: 3.5vw;
+    height: auto;
   }
   .icons {
-      top: 25%;
-      right: 7%;
-      display: block;
-      height: 5vw;
-      width: 5vw;
+    top: 25%;
+    right: 7%;
+    display: block;
+    height: 5vw;
+    width: 5vw;
   }
 
-  #menu-icon{
-      width: 5vw;
-    }
+  #menu-icon {
+    width: 5vw;
+  }
 
-  #check:checked~.icons #menu-icon {
-      display: none;
+  #check:checked ~ .icons #menu-icon {
+    display: none;
   }
 
   .icons #close-icon {
-      display: none;
+    display: none;
   }
 
-  #check:checked~.icons #close-icon {
-      display: block;
-      position: absolute;
-      width: 1.6rem;
-      height: auto;
-      right: 8%;
-      top: 18%;
+  #check:checked ~ .icons #close-icon {
+    display: block;
+    position: absolute;
+    width: 1.6rem;
+    height: auto;
+    right: 8%;
+    top: 18%;
   }
   .navbar {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 0rem;
-      background-color: #001F4A;
-      overflow: hidden;
-      transition: .3s ease;
-      flex-direction: column; 
-      align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0rem;
+    background-color: #001f4a;
+    overflow: hidden;
+    transition: 0.3s ease;
+    flex-direction: column;
+    align-items: center;
   }
-  .navbar a:hover{
-      color: #B0D8FF;
-      font-weight: 600;
+  .navbar a:hover {
+    color: #b0d8ff;
+    font-weight: 600;
   }
   .navbar a:hover::before {
-      width: 0%; 
+    width: 0%;
   }
-  #check:checked~.navbar {
-      height: 14rem;
+  #check:checked ~ .navbar {
+    height: 14rem;
   }
-  .navbar a{
-      font-size: 0.9rem;
-      color: #ffffff;
-      margin: 10px 0;
+  .navbar a {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin: 10px 0;
   }
 
-  .button-wrapper{
-      position: absolute;
-      right: 15%;
+  .button-wrapper {
+    position: absolute;
+    right: 15%;
   }
-  .button1{
-      padding: 0.6rem 1.5rem;
-      font-size: 2vw;
+  .button1 {
+    padding: 0.6rem 1.5rem;
+    font-size: 2vw;
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
   .header {
-      padding: 0.7rem 2rem; 
+    padding: 0.7rem 2rem;
   }
-  #hero{
-      font-size: 3vw;
-      line-height: 2.3vw;
+  #hero {
+    font-size: 3vw;
+    line-height: 2.3vw;
   }
-  .logo-bawah{
-      font-size: 1.5vw;
+  .logo-bawah {
+    font-size: 1.5vw;
   }
-  .logo-img img{
-      width: 4vw;
-      height: auto;
+  .logo-img img {
+    width: 4vw;
+    height: auto;
   }
-  .button-wrapper{
-      position: absolute;
-      right: 16%;
+  .button-wrapper {
+    position: absolute;
+    right: 16%;
   }
-  .button1{
-      padding: 0.35rem 0.9rem;
-      font-size: 2.5vw;
+  .button1 {
+    padding: 0.35rem 0.9rem;
+    font-size: 2.5vw;
   }
   .icons {
-      position: absolute;
-      top: 27%;
-      right: 7%;
-      display: block;
-      width: 5.5vw;
-      height: auto;
+    position: absolute;
+    top: 27%;
+    right: 7%;
+    display: block;
+    width: 5.5vw;
+    height: auto;
   }
-  #check:checked~.icons #close-icon {
-      display: block;
-      position: absolute;
-      width: 1.1rem;
-      height: auto;
-      right: 7%;
-      top: 22%;
+  #check:checked ~ .icons #close-icon {
+    display: block;
+    position: absolute;
+    width: 1.1rem;
+    height: auto;
+    right: 7%;
+    top: 22%;
   }
 }
 
@@ -306,10 +309,10 @@ body {
 
 .isi::before,
 .isi::after {
-  content: '';
+  content: "";
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(331deg, hsl(210, 100%, 87%) 25.5%, #66B4FF 90.3%);
+  background: linear-gradient(331deg, hsl(210, 100%, 87%) 25.5%, #66b4ff 90.3%);
   z-index: -1;
   animation: moveCircle 10s linear infinite;
 }
@@ -330,19 +333,19 @@ body {
 
 @keyframes moveCircle {
   0% {
-      transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   25% {
-      transform: translate(60px, 20px);
+    transform: translate(60px, 20px);
   }
   50% {
-      transform: translate(0, -40px);
+    transform: translate(0, -40px);
   }
   75% {
-      transform: translate(-60px, 20px);
+    transform: translate(-60px, 20px);
   }
   100% {
-      transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 
@@ -369,7 +372,7 @@ body {
   height: 3px;
   width: 105px;
   border-radius: 8px;
-  background-color: #0055C9;
+  background-color: #0055c9;
 }
 
 #form {
@@ -390,6 +393,7 @@ body {
   flex-direction: column;
   width: calc(33.333% - 20px);
   margin-top: -10px;
+  position: relative;
 }
 
 .input-field label {
@@ -397,21 +401,78 @@ body {
   font-weight: 500;
 }
 
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 2vw;
+  border: 1px solid #0055c9;
+  padding: 0 20px;
+  height: 42px;
+  margin: 8px 0;
+  background-color: #ffffff;
+  color: #001f4a;
+  width: 100%;
+}
+
+input::placeholder {
+  color: #001f4a;
+}
+
+.input-wrapper .show-password {
+  position: absolute;
+  background: none;
+  border: none;
+  width: 15px;
+  right: 1.35rem;
+  top: 56%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.input-field .error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px; 
+}
+
+.input-wrapper input:focus,
+.input-wrapper input:active {
+  border-color: hsl(211, 100%, 50%);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.checkbox-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 20px;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-field label {
+  margin-left: 10px;
+}
+
 .input-field input {
   outline: none;
   font-size: 14px;
   font-weight: 400;
   border-radius: 2vw;
-  border: 1px solid #0055C9;
+  border: 1px solid #0055c9;
   padding: 0 20px;
   height: 42px;
   margin: 8px 0;
   background-color: #ffffff;
-  color: #001F4A;
-}
-
-input::placeholder {
-  color: #001F4A;
+  color: #001f4a;
 }
 
 .input-field div {
@@ -420,14 +481,7 @@ input::placeholder {
   gap: 10px;
 }
 
-.input-field input:focus,
-.input-field input:active {
-  border-color: hsl(211, 100%, 50%);
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-
-.checkbox-section{
+.checkbox-section {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -468,7 +522,10 @@ input::placeholder {
 .btn button {
   padding: 0.8vw 0;
   border-radius: 30vw;
-  background: var(--gradient1, linear-gradient(90deg, #66B4FF 0%, #0055C9 100%));
+  background: var(
+    --gradient1,
+    linear-gradient(90deg, #66b4ff 0%, #0055c9 100%)
+  );
   color: #ffffff;
   border: none;
   font-size: 17px;
@@ -481,14 +538,14 @@ input::placeholder {
 }
 
 .btn button:hover {
-  transform: scale(0.9); 
+  transform: scale(0.9);
 }
 
 .btnn button {
   padding: 0.8vw 0;
   border-radius: 30vw;
-  background: linear-gradient(90deg, #DEEFFF 0%, #B0D8FF 120%);
-  color: #0049A8;
+  background: linear-gradient(90deg, #deefff 0%, #b0d8ff 120%);
+  color: #0049a8;
   border: none;
   font-size: 17px;
   line-height: 20px;
@@ -500,38 +557,38 @@ input::placeholder {
 }
 
 .btnn button:hover {
-  transform: scale(0.9); 
+  transform: scale(0.9);
 }
 
-#error{
+#error {
   margin-top: 20px;
   color: red;
 }
 
 @media (max-width: 1200px) {
   .input-field {
-      width: calc(50% - 20px);
+    width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 768px) {
-  .container{
+  .container {
     margin: 15vw 6vw 6.5vw 6vw;
   }
   .input-field {
-      width: 100%;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .container{
+  .container {
     padding: 40px;
     margin: 9vw 0 0 0;
   }
-  .button-group{
+  .button-group {
     justify-content: center;
   }
-  .button-group button{
+  .button-group button {
     width: 35vw;
   }
 }

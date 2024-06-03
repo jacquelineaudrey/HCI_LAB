@@ -86,6 +86,8 @@ function updateSlider() {
   container.style.transform = `translateX(${translateValue}px)`;
 }
 
+matchViewportWidth();
+resizeSlider();
 updateSlider();
 
 /* ============================= FAQ ============================== */

@@ -401,12 +401,13 @@ button:hover {
 .isi {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   background: #deefff;
   background: linear-gradient(117deg, #fff 0%, #deefff 70.61%);
   padding-top: 11vw;
   padding-bottom: 6vw;
+  min-height: 78vh;
 }
 
 .container {
@@ -724,6 +725,13 @@ header {
   }
   .video-container {
     grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .video-card{
+    width: 70%;
   }
   .header-title {
     font-size: 14px;
@@ -735,6 +743,9 @@ header {
     margin-bottom: 3vw;
     width: 80%;
   }
+  .button-selection{
+    margin-bottom: 30px;
+  }
   .button-option {
     gap: 0.7rem;
   }
@@ -744,6 +755,12 @@ header {
   }
   .love-black {
     width: 5vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .video-card{
+    width: 80%;
   }
 }
 

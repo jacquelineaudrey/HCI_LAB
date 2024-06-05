@@ -549,6 +549,27 @@ p {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .teacher{
+    padding: 15px;
+  }
+  .teacher-details{
+    gap: 1rem;
+  }
+  .profile{
+    width: 35px;
+  }
+  .icon{
+    width: 25px;
+  }
+  #teacher-name{
+    font-size: 14px;
+  }
+  .video-title{
+    width: 60%;
+  }
+}
+
 /*========================================= QUIZ/EXERCICES ======================================*/
 
 .question-section {

@@ -82,7 +82,8 @@ body {
 }
 
 .logo-img img {
-  height: 2.7vw;
+  width: 2.7vw;
+  margin-top: 5px;
 }
 
 #check {
@@ -186,6 +187,7 @@ body {
   }
   .logo-img img {
     width: 3.5vw;
+    margin-top: 10px;
     height: auto;
   }
   .icons {
@@ -376,6 +378,7 @@ body {
   font-size: 1.45vw;
   font-weight: 300;
   line-height: 2.5vw;
+  width: 90%;
 }
 
 .idk-landing-page {
@@ -498,6 +501,9 @@ body {
   #content-landing-page {
     margin-left: 10vw;
   }
+  .subtitle{
+    width: 100%;
+  }
   .isiTiga {
     justify-content: space-evenly;
     padding-left: 9vw;
@@ -553,13 +559,14 @@ body {
     margin-left: 1.5vw;
   }
   .subtitle {
+    width: 95%;
     margin-top: 2vw;
     font-size: 3vw;
     text-align: center;
     line-height: 160%;
   }
   .idk-landing-page {
-    width: 100%;
+    width: 80%;
     margin-top: 3vw;
     align-items: center;
     justify-content: space-evenly;
@@ -572,7 +579,7 @@ body {
 
   .checked {
     width: 3.5vw;
-    margin-right: 1.5vw;
+    margin-right: 5px;
   }
   .get {
     margin: 0;
@@ -584,7 +591,7 @@ body {
     justify-content: center;
     margin: 0;
     margin-top: 3vw;
-    gap: 6.5vw;
+    gap: 2.5vw;
   }
   #button-subscribe {
     padding: 1.3vw 10vw;
@@ -608,9 +615,6 @@ body {
   .header {
     padding-left: 7vw;
     padding-right: 7vw;
-  }
-  .checked {
-    margin-right: 15px;
   }
   .isiTiga {
     width: 95%;

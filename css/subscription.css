@@ -1,30 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    background: #ffffff;
-    color: #001F4A;
+  background: #ffffff;
+  color: #001f4a;
 }
 
 /* ======================================== NAVBAR ========================================= */
 
-.header{
+.header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.6vw 6vw; 
+  padding: 1.6vw 6vw;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -39,16 +39,16 @@ body {
   gap: 0.3vw;
 }
 
-#hero{
+#hero {
   display: flex;
   flex-direction: column;
-  margin-right: 10px; 
+  margin-right: 10px;
   font-size: 1.8vw;
   line-height: 1.5vw;
   font-weight: 1000;
   letter-spacing: 0.1px;
   text-decoration: none;
-  color: #001F4A;
+  color: #001f4a;
   text-align: start;
 }
 
@@ -59,14 +59,14 @@ body {
 }
 
 #hero:hover {
-  color: #0049A8 ;
+  color: #0049a8;
   transition: color 0.2s ease-in-out;
 }
 
-#logoo{
+#logoo {
   display: flex;
   flex-direction: column;
-  margin-right: 10px; 
+  margin-right: 10px;
   font-size: 1.8vw;
   line-height: 1.5vw;
   font-weight: 700;
@@ -77,12 +77,12 @@ body {
 }
 
 #logoo:hover {
-  color: #B0D8FF;
+  color: #b0d8ff;
   transition: color 0.2s ease-in-out;
 }
 
 .logo-img img {
-  height: 2.7vw; 
+  height: 2.7vw;
 }
 
 #check {
@@ -100,47 +100,50 @@ body {
 }
 
 .navbar {
-  flex: 1; 
+  flex: 1;
   display: flex;
   justify-content: center;
   font-size: 1.3vw;
 }
 
 .navbar a {
-  position: relative; 
-  color: #001F4A;
-  margin: 0 1.6vw; 
+  position: relative;
+  color: #001f4a;
+  margin: 0 1.6vw;
   text-decoration: none;
-  opacity: 1; 
+  opacity: 1;
 }
 
 .navbar a:hover {
-  color: #0049A8;
+  color: #0049a8;
 }
 
 .navbar a::before {
-  content: ''; 
+  content: "";
   position: absolute;
-  bottom: -0.3vw; 
-  left: 0; 
-  width: 0; 
-  height: 0.2vw; 
-  background: linear-gradient(90deg,  #66B4FF 0%, #0055C9 100%);
+  bottom: -0.3vw;
+  left: 0;
+  width: 0;
+  height: 0.2vw;
+  background: linear-gradient(90deg, #66b4ff 0%, #0055c9 100%);
   transition: width 0.7s ease;
 }
 
 .navbar a:hover::before {
-  width: 100%; 
+  width: 100%;
 }
 
-.button-wrapper{
+.button-wrapper {
   display: inline-block;
 }
 
 .button1 {
   padding: 0.8vw 2vw;
   border-radius: 30vw;
-  background: var(--gradient1, linear-gradient(90deg, #66B4FF 0%, #0055C9 100%));
+  background: var(
+    --gradient1,
+    linear-gradient(90deg, #66b4ff 0%, #0055c9 100%)
+  );
   color: #ffffff;
   border: none;
   text-decoration: none;
@@ -151,144 +154,144 @@ body {
 }
 
 .button1:hover {
-  transform: scale(0.9); 
+  transform: scale(0.9);
 }
 
 @media screen and (max-width: 1200px) {
-  .header{
-      padding: 1.6vw 6%;
+  .header {
+    padding: 1.6vw 6%;
   }
-  .logo-wrapper{
-      gap: 0vw;
+  .logo-wrapper {
+    gap: 0vw;
   }
-  .button1{
-      padding: 0.8vw 2.1vw;
-      font-size: 1.3vw;
+  .button1 {
+    padding: 0.8vw 2.1vw;
+    font-size: 1.3vw;
   }
-  .navbar a{
-      font-size: 1.3vw;
+  .navbar a {
+    font-size: 1.3vw;
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .header {
-      padding: 1.1rem 2rem; 
+    padding: 1.1rem 2rem;
   }
-  #hero{
-      font-size: 2.5vw;
-      line-height: 2vw;
+  #hero {
+    font-size: 2.5vw;
+    line-height: 2vw;
   }
-  .logo-bawah{
-      font-size: 1.3vw;
+  .logo-bawah {
+    font-size: 1.3vw;
   }
-  .logo-img img{
-      width: 3.5vw;
-      height: auto;
+  .logo-img img {
+    width: 3.5vw;
+    height: auto;
   }
   .icons {
-      top: 25%;
-      right: 7%;
-      display: block;
-      height: 5vw;
-      width: 5vw;
+    top: 25%;
+    right: 7%;
+    display: block;
+    height: 5vw;
+    width: 5vw;
   }
 
-  #menu-icon{
-      width: 5vw;
-    }
+  #menu-icon {
+    width: 5vw;
+  }
 
-  #check:checked~.icons #menu-icon {
-      display: none;
+  #check:checked ~ .icons #menu-icon {
+    display: none;
   }
 
   .icons #close-icon {
-      display: none;
+    display: none;
   }
 
-  #check:checked~.icons #close-icon {
-      display: block;
-      position: absolute;
-      width: 1.6rem;
-      height: auto;
-      right: 8%;
-      top: 18%;
+  #check:checked ~ .icons #close-icon {
+    display: block;
+    position: absolute;
+    width: 1.6rem;
+    height: auto;
+    right: 8%;
+    top: 18%;
   }
   .navbar {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 0rem;
-      background-color: #001F4A;
-      overflow: hidden;
-      transition: .3s ease;
-      flex-direction: column; 
-      align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0rem;
+    background-color: #001f4a;
+    overflow: hidden;
+    transition: 0.3s ease;
+    flex-direction: column;
+    align-items: center;
   }
-  .navbar a:hover{
-      color: #B0D8FF;
-      font-weight: 600;
+  .navbar a:hover {
+    color: #b0d8ff;
+    font-weight: 600;
   }
   .navbar a:hover::before {
-      width: 0%; 
+    width: 0%;
   }
-  #check:checked~.navbar {
-      height: 14rem;
+  #check:checked ~ .navbar {
+    height: 14rem;
   }
-  .navbar a{
-      font-size: 0.9rem;
-      color: #ffffff;
-      margin: 10px 0;
+  .navbar a {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin: 10px 0;
   }
 
-  .button-wrapper{
-      position: absolute;
-      right: 15%;
+  .button-wrapper {
+    position: absolute;
+    right: 15%;
   }
-  .button1{
-      padding: 0.6rem 1.5rem;
-      font-size: 2vw;
+  .button1 {
+    padding: 0.6rem 1.5rem;
+    font-size: 2vw;
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
   .header {
-      padding: 0.7rem 2rem; 
+    padding: 0.7rem 2rem;
   }
-  #hero{
-      font-size: 3vw;
-      line-height: 2.3vw;
+  #hero {
+    font-size: 3vw;
+    line-height: 2.3vw;
   }
-  .logo-bawah{
-      font-size: 1.5vw;
+  .logo-bawah {
+    font-size: 1.5vw;
   }
-  .logo-img img{
-      width: 4vw;
-      height: auto;
+  .logo-img img {
+    width: 4vw;
+    height: auto;
   }
-  .button-wrapper{
-      position: absolute;
-      right: 16%;
+  .button-wrapper {
+    position: absolute;
+    right: 16%;
   }
-  .button1{
-      padding: 0.35rem 0.9rem;
-      font-size: 2.5vw;
+  .button1 {
+    padding: 0.35rem 0.9rem;
+    font-size: 2.5vw;
   }
   .icons {
-      position: absolute;
-      top: 27%;
-      right: 7%;
-      display: block;
-      width: 5.5vw;
-      height: auto;
+    position: absolute;
+    top: 27%;
+    right: 7%;
+    display: block;
+    width: 5.5vw;
+    height: auto;
   }
-  #check:checked~.icons #close-icon {
-      display: block;
-      position: absolute;
-      width: 1.1rem;
-      height: auto;
-      right: 7%;
-      top: 22%;
+  #check:checked ~ .icons #close-icon {
+    display: block;
+    position: absolute;
+    width: 1.1rem;
+    height: auto;
+    right: 7%;
+    top: 22%;
   }
 }
 
@@ -355,7 +358,7 @@ body {
 
 .switch {
   position: relative;
-  width: 12rem; 
+  width: 12rem;
   height: 2.7rem;
   border-radius: 10rem;
   background-color: white;
@@ -365,7 +368,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 0.7rem;
-  padding: 0 0.5rem; 
+  padding: 0 0.5rem;
 }
 
 .switch-thumb {
@@ -385,8 +388,8 @@ body {
 .switch-label {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #0049a8 ;
-  flex: 1; 
+  color: #0049a8;
+  flex: 1;
   text-align: center;
 }
 
@@ -536,9 +539,10 @@ body {
   transform: scale(0.9);
 }
 
-.free button{
-  color: #0049A8 ;
+.free button {
+  color: #0049a8;
   background: #deefff;
+  cursor: default;
 }
 
 .free button:hover {
@@ -614,9 +618,8 @@ body {
   transform: rotate(-45deg);
 }
 
-
 @media screen and (max-width: 2000px) {
-  .isi{
+  .isi {
     padding-top: 11vw;
   }
 }
@@ -626,13 +629,13 @@ body {
     padding: 8px 0;
     font-size: 15px;
   }
-  .list-name{
+  .list-name {
     font-size: 14px;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .isi{
+  .isi {
     padding-top: 12vw;
   }
   .table {
@@ -653,18 +656,22 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .subs-packages {
+    align-items: center;
+    justify-content: center;
+  }
   .table {
-    width: 100%;
+    width: 70%;
     margin-bottom: 40px;
   }
   .isi {
     padding-top: 20vw;
   }
-  .header-title{
+  .header-title {
     font-size: 14px;
     margin-bottom: 2vw;
   }
-  .header-subtitle{
+  .header-subtitle {
     font-size: 12px;
     line-height: 35px;
     margin-bottom: 3vw;
@@ -673,21 +680,24 @@ body {
     font-size: 19px;
     padding: 1.5vw 0;
   }
-  .header-switch{
+  .header-switch {
     margin-bottom: 9vw;
   }
 }
 
 @media screen and (max-width: 500px) {
-    .header-title{
-        font-size: 14px;
-        margin-bottom: 2vw;
-      }
-      .header-subtitle{
-        font-size: 10px;
-        line-height: 30px;
-        margin-bottom: 3vw;
-      }
+  .header-title {
+    font-size: 14px;
+    margin-bottom: 2vw;
+  }
+  .header-subtitle {
+    font-size: 10px;
+    line-height: 30px;
+    margin-bottom: 3vw;
+  }
+  .table{
+    width: 90%;
+  }
 }
 
 /* ================================ FOOTER ================================= */

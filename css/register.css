@@ -83,7 +83,8 @@ body {
 }
 
 .logo-img img {
-  height: 2.7vw;
+  width: 2.7vw;
+  margin-top: 5px;
 }
 
 #check {
@@ -187,6 +188,7 @@ body {
   }
   .logo-img img {
     width: 3.5vw;
+    margin-top: 4px;
     height: auto;
   }
   .icons {
@@ -267,7 +269,9 @@ body {
     font-size: 1.5vw;
   }
   .logo-img img {
-    width: 4vw;
+    margin-top: 5px;
+    margin-left: -5px;
+    width: 6vw;
     height: auto;
   }
   .button-wrapper {
